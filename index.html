@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -287,6 +287,16 @@
   .page-footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--hairline); }
   .page-footer p { font-size: 10px; color: var(--light); line-height: 1.7; max-width: 580px; letter-spacing: 0.01em; }
 
+  /* ═══════ LEGAL DISCLAIMERS ═══════ */
+  .legal-disclaimer {
+    margin: 24px 0 0; padding: 14px 18px; border-radius: 12px;
+    background: rgba(217,119,6,0.04); border: 1px solid rgba(217,119,6,0.12);
+    font-size: 11px; color: var(--mid); line-height: 1.65;
+  }
+  .legal-disclaimer strong { color: var(--dark); font-weight: 600; }
+  .legal-disclaimer a { color: var(--blue); text-decoration: underline; }
+  .legal-footer-block { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hairline); font-size: 10px; color: var(--light); line-height: 1.7; }
+
   /* ═══════ INGREDIENTS DEEP-DIVE ═══════ */
   .ing-deep-intro { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 32px; max-width: 640px; }
   .mg-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
@@ -375,14 +385,14 @@
 <div class="top-bar">
   <div class="top-bar-inner">
     <div class="logo">Zdrowie.pl</div>
-    <input class="search-bar" type="text" placeholder="Search supplements, vitamins, OTC...">
+    <input class="search-bar" type="text" placeholder="Szukaj suplementów, witamin, leków OTC...">
     <div class="top-right">
-      <span class="top-link">Supplements</span>
-      <span class="top-link">OTC Medicine</span>
-      <span class="top-link">Sports Nutrition</span>
+      <span class="top-link">Suplementy</span>
+      <span class="top-link">Leki OTC</span>
+      <span class="top-link">Sport</span>
       <div class="cart-badge" id="top-cart">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
-        <span id="cart-total">$0.00</span>
+        <span id="cart-total">0,00 zł</span>
       </div>
     </div>
   </div>
@@ -499,7 +509,7 @@
   <!-- MAIN — white card surface -->
   <div class="main">
     <div class="main-inner">
-      <div class="breadcrumb">Supplements <span class="sep">&rarr;</span> Minerały <span class="sep">&rarr;</span> Magnez</div>
+      <div class="breadcrumb">Suplementy <span class="sep">&rarr;</span> Minerały <span class="sep">&rarr;</span> Magnez</div>
 
       <div class="container">
 
@@ -508,21 +518,21 @@
           <div>
             <div class="brand-label">Purecell Nutrition</div>
             <h1>Magnesium Bisglycinate Complex</h1>
-            <p class="subtitle">Chelated Magnesium + Cofactors</p>
-            <p class="short-desc">Highly bioavailable chelated magnesium with vitamin B6, taurine, and zinc for optimal absorption and utilization.</p>
+            <p class="subtitle">Chelat magnezu + kofaktory wchłaniania</p>
+            <p class="short-desc">Magnez w formie chelatu diglicynianowego o wysokiej przyswajalności, wzbogacony o witaminę B6, taurynę i cynk wspierające wchłanianie i wykorzystanie w organizmie.</p>
             <div class="quick-facts">
-              <div class="fact"><div class="fact-label">Form</div><div class="fact-value">Capsules</div></div>
-              <div class="fact"><div class="fact-label">Serving</div><div class="fact-value">2 caps</div></div>
-              <div class="fact"><div class="fact-label">Supply</div><div class="fact-value">45 servings</div></div>
+              <div class="fact"><div class="fact-label">Postać</div><div class="fact-value">Kapsułki</div></div>
+              <div class="fact"><div class="fact-label">Dawkowanie</div><div class="fact-value">2 kaps./dzień</div></div>
+              <div class="fact"><div class="fact-label">Wystarczy na</div><div class="fact-value">45 dni</div></div>
               <div class="fact"><div class="fact-label">SKU</div><div class="fact-value">PCN-MAG-090</div></div>
             </div>
             <div class="rating-row">
               <span class="rating-num">4.7</span>
               <span class="rating-sub">/ 5.0</span>
-              <span class="rating-sub" style="margin-left:8px">2,847 verified reviews</span>
+              <span class="rating-sub" style="margin-left:8px">2 847 opinii</span>
             </div>
             <div class="certs">
-              <span class="cert cert-gmp"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>GMP Certified</span>
+              <span class="cert cert-gmp"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>GMP</span>
               <span class="cert cert-nsf"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>NSF Tested</span>
               <span class="cert cert-vegan"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l2 2"/><path d="M20.59 3.41C22 4.82 22 12 22 12s-7.18 0-8.59-1.41a2.83 2.83 0 010-4l0 0a2.83 2.83 0 014 0l0 0c1.41 1.41 2.59 3.41 2.59 3.41"/></svg>Vegan</span>
               <span class="cert cert-nongmo"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>Non-GMO</span>
@@ -542,30 +552,30 @@
                 style="width: 100%; height: 70%; --poster-color: transparent;"
               ></model-viewer>
             </div>
-            <div class="price">$34.99</div>
-            <div class="price-sub">$0.78 per serving · 45 servings</div>
+            <div class="price">139,99 zł</div>
+            <div class="price-sub">3,12 zł / dawka dzienna · wystarczy na 45 dni</div>
             <div class="cart-row">
               <div class="qty-wrap">
                 <button class="qty-btn" id="qty-minus">&minus;</button>
                 <div class="qty-display" id="qty-display">1</div>
                 <button class="qty-btn" id="qty-plus">+</button>
               </div>
-              <button class="add-cart" id="add-cart">Add to Cart &mdash; $34.99</button>
+              <button class="add-cart" id="add-cart">Do koszyka &mdash; 139,99 zł</button>
             </div>
-            <button class="subscribe-btn">Subscribe &amp; Save 15%</button>
+            <button class="subscribe-btn">Autoship — oszczędzasz 15%</button>
             <div class="perks">
-              <div>&check;  Free shipping over $50</div>
-              <div>&check;  30-day satisfaction guarantee</div>
-              <div>&check;  Certificate of Analysis available</div>
+              <div>&check;  Darmowa wysyłka od 200 zł</div>
+              <div>&check;  Gwarancja satysfakcji — 30 dni na zwrot</div>
+              <div>&check;  Certyfikat analizy (CoA) do pobrania</div>
             </div>
           </div>
         </div>
 
         <!-- TRANSPARENCY SCORES -->
         <div class="scores-section">
-          <div class="section-label">Transparency Dashboard</div>
+          <div class="section-label">Ocena jakości produktu</div>
           <div class="metrics-row">
-            <div class="metric" data-tooltip="Based on 14 peer-reviewed studies and 3 meta-analyses supporting bisglycinate efficacy.">
+            <div class="metric" data-tooltip="Na podstawie 14 badań klinicznych i 3 meta-analiz potwierdzających skuteczność chelatu diglicynianowego.">
               <div class="metric-ring">
                 <svg viewBox="0 0 80 80" width="80" height="80">
                   <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
@@ -573,10 +583,10 @@
                 </svg>
                 <div class="metric-number" data-target="87" style="color:#0D9668">0</div>
               </div>
-              <div class="metric-label">Evidence</div>
-              <div class="metric-sublabel">14 clinical studies</div>
+              <div class="metric-label">Badania</div>
+              <div class="metric-sublabel">14 badań klinicznych</div>
             </div>
-            <div class="metric" data-tooltip="15% below average price for chelated magnesium with cofactors included.">
+            <div class="metric" data-tooltip="15% taniej niż średnia rynkowa za chelat magnezu z kofaktorami.">
               <div class="metric-ring">
                 <svg viewBox="0 0 80 80" width="80" height="80">
                   <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
@@ -584,10 +594,10 @@
                 </svg>
                 <div class="metric-number" data-target="82" style="color:#4A6FA5">0</div>
               </div>
-              <div class="metric-label">Value</div>
-              <div class="metric-sublabel">$0.78 per serving</div>
+              <div class="metric-label">Opłacalność</div>
+              <div class="metric-sublabel">3,12 zł / dawka</div>
             </div>
-            <div class="metric" data-tooltip="NSF certified, free from heavy metals, solvents, and microbial contaminants.">
+            <div class="metric" data-tooltip="Certyfikat NSF — wolny od metali ciężkich, rozpuszczalników i zanieczyszczeń mikrobiologicznych.">
               <div class="metric-ring">
                 <svg viewBox="0 0 80 80" width="80" height="80">
                   <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
@@ -595,10 +605,11 @@
                 </svg>
                 <div class="metric-number" data-target="95" style="color:#00B4D8">0</div>
               </div>
-              <div class="metric-label">Purity</div>
-              <div class="metric-sublabel">NSF certified</div>
+              <div class="metric-label">Czystość</div>
+              <div class="metric-sublabel">Certyfikat NSF</div>
+
             </div>
-            <div class="metric" data-tooltip="Full INCI disclosure, third-party CoA available, TRAACS® verified chelation.">
+            <div class="metric" data-tooltip="Pełna deklaracja składu, certyfikat analizy (CoA) do pobrania, zweryfikowana chelacja TRAACS®.">
               <div class="metric-ring">
                 <svg viewBox="0 0 80 80" width="80" height="80">
                   <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
@@ -606,126 +617,126 @@
                 </svg>
                 <div class="metric-number" data-target="91" style="color:#D97706">0</div>
               </div>
-              <div class="metric-label">Transparency</div>
-              <div class="metric-sublabel">Full CoA available</div>
+              <div class="metric-label">Transparentność</div>
+              <div class="metric-sublabel">CoA do pobrania</div>
             </div>
           </div>
-          <p class="scores-note">Composite scores derived from peer-reviewed evidence, third-party lab analysis, label accuracy audits, and cost-effectiveness benchmarks. Hover each card for details.</p>
+          <p class="scores-note">Oceny oparte na recenzowanych badaniach klinicznych, niezależnych analizach laboratoryjnych, weryfikacji etykiet i porównaniu cen rynkowych. Najedź na kartę, aby zobaczyć szczegóły.</p>
         </div>
 
         <!-- TABS -->
         <div class="tab-nav">
-          <button class="tab-btn active" data-tab="composition">Composition</button>
-          <button class="tab-btn" data-tab="ingredients">Ingredients</button>
-          <button class="tab-btn" data-tab="usecases">Use Cases</button>
-          <button class="tab-btn" data-tab="safety">Safety</button>
-          <button class="tab-btn" data-tab="benchmarks">Benchmarks</button>
-          <button class="tab-btn" data-tab="value">Value</button>
-          <button class="tab-btn" data-tab="reviews">Reviews</button>
+          <button class="tab-btn active" data-tab="composition">Skład</button>
+          <button class="tab-btn" data-tab="ingredients">Formy magnezu</button>
+          <button class="tab-btn" data-tab="usecases">Działanie</button>
+          <button class="tab-btn" data-tab="safety">Bezpieczeństwo</button>
+          <button class="tab-btn" data-tab="benchmarks">Vs. konkurencja</button>
+          <button class="tab-btn" data-tab="value">Opłacalność</button>
+          <button class="tab-btn" data-tab="reviews">Opinie</button>
         </div>
 
         <!-- COMPOSITION -->
         <div class="tab-panel active" id="tab-composition">
-          <div class="section-label">Active Ingredients</div>
-          <div class="ing-table-head"><span>Ingredient</span><span>Form</span><span>Amount</span><span>% DV</span><span>Evidence</span><span>Notes</span></div>
-          <div class="ing-row"><div><div class="ing-name">Magnesium</div></div><span class="ing-form">Bisglycinate Chelate</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">48%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Strong</span></div><span class="ing-notes">TRAACS® chelated form — highest bioavailability class</span></div>
-          <div class="ing-row"><div><div class="ing-name">Vitamin B6</div><div class="cofactor-tag">Cofactor</div></div><span class="ing-form">Pyridoxal-5-Phosphate</span><span class="ing-amount">10 mg</span><span class="ing-dv" style="color:var(--black);font-weight:600">588%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Strong</span></div><span class="ing-notes">Active coenzyme form. Supports Mg cellular transport.</span></div>
-          <div class="ing-row"><div><div class="ing-name">Taurine</div><div class="cofactor-tag">Cofactor</div></div><span class="ing-form">Free-form amino acid</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">&mdash;</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Moderate</span></div><span class="ing-notes">Synergizes with Mg for cardiac and neural function.</span></div>
-          <div class="ing-row"><div><div class="ing-name">Zinc</div><div class="cofactor-tag">Cofactor</div></div><span class="ing-form">Bisglycinate Chelate</span><span class="ing-amount">5 mg</span><span class="ing-dv" style="color:var(--mid)">45%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Moderate</span></div><span class="ing-notes">Low-dose chelated cofactor. Avoids GI upset.</span></div>
+          <div class="section-label">Tabela składników</div>
+          <div class="ing-table-head"><span>Składnik</span><span>Forma</span><span>Zawartość</span><span>% NRV</span><span>Badania</span><span>Uwagi</span></div>
+          <div class="ing-row"><div><div class="ing-name">Magnez</div></div><span class="ing-form">Chelat diglicynianowy</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">48%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Mocne</span></div><span class="ing-notes">TRAACS® — najwyższa klasa przyswajalności</span></div>
+          <div class="ing-row"><div><div class="ing-name">Witamina B6</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">P-5-P (pirydoksal-5-fosforan)</span><span class="ing-amount">10 mg</span><span class="ing-dv" style="color:var(--black);font-weight:600">588%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Mocne</span></div><span class="ing-notes">Aktywna forma koenzymu. Ułatwia transport Mg do komórek.</span></div>
+          <div class="ing-row"><div><div class="ing-name">Tauryna</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">L-tauryna (wolna forma)</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">&mdash;</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Średnie</span></div><span class="ing-notes">Wspomaga pracę serca i układu nerwowego w synergii z Mg.</span></div>
+          <div class="ing-row"><div><div class="ing-name">Cynk</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">Chelat diglicynianowy</span><span class="ing-amount">5 mg</span><span class="ing-dv" style="color:var(--mid)">45%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Średnie</span></div><span class="ing-notes">Niska dawka w formie chelatu — bez podrażnień przewodu pokarmowego.</span></div>
           <div class="divider"></div>
           <div class="two-col">
-            <div><div class="section-label">Other Ingredients</div><p class="other-ing-text">Hypromellose (capsule), Microcrystalline Cellulose, Silicon Dioxide</p></div>
-            <div><div class="section-label">Allergen Statement</div><div class="allergen-tags"><span class="allergen-tag">Gluten-free</span><span class="allergen-tag">Dairy-free</span><span class="allergen-tag">Soy-free</span><span class="allergen-tag">Egg-free</span><span class="allergen-tag">Vegan</span></div></div>
+            <div><div class="section-label">Substancje pomocnicze</div><p class="other-ing-text">Hypromeloza (otoczka kapsułki), celuloza mikrokrystaliczna, dwutlenek krzemu</p></div>
+            <div><div class="section-label">Informacja o alergenach</div><div class="allergen-tags"><span class="allergen-tag">Bez glutenu</span><span class="allergen-tag">Bez laktozy</span><span class="allergen-tag">Bez soi</span><span class="allergen-tag">Bez jaj</span><span class="allergen-tag">Vegan</span></div></div>
           </div>
         </div>
 
         <!-- INGREDIENTS DEEP-DIVE -->
         <div class="tab-panel" id="tab-ingredients">
-          <div class="section-label">Magnesium Forms — Bioavailability Comparison</div>
-          <p class="ing-deep-intro">Not all magnesium is equal. The form determines how much your body actually absorbs. This product uses bisglycinate chelate — one of the most bioavailable forms, bound to the amino acid glycine for gentle absorption without GI distress.</p>
+          <div class="section-label">Formy magnezu — porównanie przyswajalności</div>
+          <p class="ing-deep-intro">Nie każdy magnez działa tak samo. To, jaką formę wybierzesz, decyduje, ile Twój organizm faktycznie przyswoi. Ten produkt zawiera chelat diglicynianowy — jedną z najlepiej przyswajalnych form, połączoną z aminokwasem glicyną. Działa łagodnie i nie obciąża żołądka.</p>
 
           <div class="mg-type-grid">
             <div class="mg-type-card highlighted">
-              <div class="mg-type-name">Magnesium Bisglycinate</div>
+              <div class="mg-type-name">Diglicynian magnezu</div>
               <div class="mg-type-formula">Mg(C₂H₄NO₂)₂</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~80%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>14.1%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Excellent</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--green)">~80%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>14,1%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--green)">Doskonała</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>200–400 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="80" style="background:var(--accent)"></div></div>
-              <p class="mg-type-desc">Chelated to glycine via TRAACS® process. Absorbed through amino acid pathways, bypassing common mineral transport bottlenecks. Best for sleep, stress, and muscle recovery. Used in this product.</p>
+              <p class="mg-type-desc">Chelatowany z glicyną w procesie TRAACS®. Wchłaniany przez szlaki aminokwasowe, omijając typowe bariery transportu minerałów. Polecany przy problemach ze snem, stresie i regeneracji mięśni. Forma użyta w tym produkcie.</p>
             </div>
 
             <div class="mg-type-card">
-              <div class="mg-type-name">Magnesium Citrate</div>
+              <div class="mg-type-name">Cytrynian magnezu</div>
               <div class="mg-type-formula">Mg₃(C₆H₅O₇)₂</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~65%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>16.2%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--amber)">Moderate</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--green)">~65%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>16,2%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--amber)">Umiarkowana</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>200–400 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="65" style="background:var(--green)"></div></div>
-              <p class="mg-type-desc">Bound to citric acid. Good absorption but may cause loose stools at higher doses. Popular general-purpose form, widely used in clinical studies.</p>
+              <p class="mg-type-desc">Połączony z kwasem cytrynowym. Dobrze przyswajalny, ale w wyższych dawkach może powodować rozluźnienie stolca. Popularna forma ogólnego zastosowania — często badana klinicznie.</p>
             </div>
 
             <div class="mg-type-card">
-              <div class="mg-type-name">Magnesium L-Threonate</div>
+              <div class="mg-type-name">L-Treonian magnezu</div>
               <div class="mg-type-formula">Mg(C₄H₇O₅)₂</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~70%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>7.2%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Good</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>1,500–2,000 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--green)">~70%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>7,2%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--green)">Dobra</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>1 500–2 000 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="70" style="background:var(--blue)"></div></div>
-              <p class="mg-type-desc">Patented Magtein® form. Uniquely crosses the blood-brain barrier. Best for cognitive function and memory. Very low elemental Mg — not ideal as sole magnesium source.</p>
+              <p class="mg-type-desc">Opatentowana forma Magtein®. Jako jedyna przenika barierę krew-mózg. Polecana dla wsparcia pamięci i koncentracji. Niska zawartość Mg pierwiastkowego — nie wystarczy jako jedyne źródło magnezu.</p>
             </div>
 
             <div class="mg-type-card">
-              <div class="mg-type-name">Magnesium Taurate</div>
+              <div class="mg-type-name">Taurynian magnezu</div>
               <div class="mg-type-formula">Mg(C₂H₆NO₃S)₂</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~60%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>8.9%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Excellent</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--green)">~60%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>8,9%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--green)">Doskonała</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>200–400 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="60" style="background:var(--blue)"></div></div>
-              <p class="mg-type-desc">Bound to taurine amino acid. Favored for cardiovascular support due to synergistic taurine effects on heart rhythm and blood pressure regulation.</p>
+              <p class="mg-type-desc">Związany z aminokwasem tauryną. Preferowany dla wsparcia układu sercowo-naczyniowego dzięki synergistycznemu działaniu tauryny na rytm serca i regulację ciśnienia.</p>
             </div>
 
             <div class="mg-type-card">
-              <div class="mg-type-name">Magnesium Malate</div>
+              <div class="mg-type-name">Jabłczan magnezu</div>
               <div class="mg-type-formula">MgC₄H₄O₅</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~55%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>15.1%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Good</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--green)">~55%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>15,1%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--green)">Dobra</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>200–400 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="55" style="background:var(--blue)"></div></div>
-              <p class="mg-type-desc">Bound to malic acid (from apples). Popular for energy and fibromyalgia support. Malic acid is involved in the Krebs cycle, making it relevant for ATP production.</p>
+              <p class="mg-type-desc">Związany z kwasem jabłkowym. Popularny dla wsparcia energii i fibromialgii. Kwas jabłkowy uczestniczy w cyklu Krebsa, co czyni go istotnym dla produkcji ATP.</p>
             </div>
 
             <div class="mg-type-card">
-              <div class="mg-type-name">Magnesium Oxide</div>
+              <div class="mg-type-name">Tlenek magnezu</div>
               <div class="mg-type-formula">MgO</div>
-              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--red)">~4%</span></div>
-              <div class="mg-type-row"><span>Elemental Mg</span><span>60.3%</span></div>
-              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--red)">Poor</span></div>
-              <div class="mg-type-row"><span>Typical Dose</span><span>400–800 mg</span></div>
+              <div class="mg-type-row"><span>Przyswajalność</span><span style="color:var(--red)">~4%</span></div>
+              <div class="mg-type-row"><span>Mg pierwiastkowy</span><span>60,3%</span></div>
+              <div class="mg-type-row"><span>Tolerancja żołądkowa</span><span style="color:var(--red)">Słaba</span></div>
+              <div class="mg-type-row"><span>Dawkowanie</span><span>400–800 mg</span></div>
               <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="4" style="background:var(--red)"></div></div>
-              <p class="mg-type-desc">Cheapest form with highest elemental Mg but extremely poor absorption (~4%). Primarily acts as an osmotic laxative. Not recommended for correcting deficiency.</p>
+              <p class="mg-type-desc">Najtańsza forma z najwyższą zawartością Mg pierwiastkowego, ale bardzo słabą przyswajalnością (~4%). Działa głównie przeczyszczająco. Nie nadaje się do uzupełniania niedoborów.</p>
             </div>
           </div>
 
           <div class="cofactor-section">
-            <div class="section-label">Cofactors in This Formula</div>
+            <div class="section-label">Kofaktory w tej formule</div>
             <div class="cofactor-grid">
               <div class="cofactor-card">
-                <div class="cofactor-name">Vitamin B6 (P5P)</div>
-                <div class="cofactor-role">Active coenzyme form of B6. Facilitates magnesium transport into cells via membrane channels. Studies show 24% higher intracellular Mg retention when co-administered with P5P vs. magnesium alone.</div>
+                <div class="cofactor-name">Witamina B6 (P-5-P)</div>
+                <div class="cofactor-role">Aktywna koenzymowa forma witaminy B6. Ułatwia transport magnezu do wnętrza komórek. Badania pokazują 24% lepsze zatrzymanie Mg w komórkach przy jednoczesnym przyjmowaniu z P-5-P.</div>
               </div>
               <div class="cofactor-card">
-                <div class="cofactor-name">Taurine</div>
-                <div class="cofactor-role">Conditionally essential amino acid that synergizes with magnesium for cardiac and neural function. Supports GABA receptor sensitivity, amplifying Mg's calming effects on the nervous system.</div>
+                <div class="cofactor-name">Tauryna</div>
+                <div class="cofactor-role">Aminokwas wspierający pracę serca i układu nerwowego w synergii z magnezem. Zwiększa wrażliwość receptorów GABA, przez co wzmacnia uspokajające działanie Mg.</div>
               </div>
               <div class="cofactor-card">
-                <div class="cofactor-name">Zinc Bisglycinate</div>
-                <div class="cofactor-role">Low-dose chelated zinc (5 mg) supports over 300 enzymatic reactions that also require magnesium as a cofactor. Chelated form avoids GI irritation and competitive absorption issues.</div>
+                <div class="cofactor-name">Diglicynian cynku</div>
+                <div class="cofactor-role">Niska dawka cynku w formie chelatu (5 mg) wspiera ponad 300 reakcji enzymatycznych wymagających również magnezu. Chelat nie podrażnia przewodu pokarmowego.</div>
               </div>
             </div>
           </div>
@@ -735,24 +746,24 @@
         <div class="tab-panel" id="tab-usecases">
           <div class="two-col">
             <div>
-              <div class="section-label">Evidence-Rated Applications</div>
-              <div class="uc-item"><div class="uc-header"><span class="uc-label">Sleep &amp; Recovery</span><span class="uc-score">92</span></div><div class="score-bar"><div class="score-bar-fill" data-score="92"></div></div><div class="uc-studies">14 published studies</div></div>
-              <div class="uc-item"><div class="uc-header"><span class="uc-label">Muscle Cramps</span><span class="uc-score">88</span></div><div class="score-bar"><div class="score-bar-fill" data-score="88"></div></div><div class="uc-studies">11 published studies</div></div>
-              <div class="uc-item"><div class="uc-header"><span class="uc-label">Stress &amp; Calm</span><span class="uc-score">79</span></div><div class="score-bar"><div class="score-bar-fill" data-score="79"></div></div><div class="uc-studies">8 published studies</div></div>
-              <div class="uc-item"><div class="uc-header"><span class="uc-label">Heart Health</span><span class="uc-score">74</span></div><div class="score-bar"><div class="score-bar-fill" data-score="74"></div></div><div class="uc-studies">6 published studies</div></div>
-              <div class="uc-item"><div class="uc-header"><span class="uc-label">Bone Support</span><span class="uc-score">65</span></div><div class="score-bar"><div class="score-bar-fill" data-score="65"></div></div><div class="uc-studies">5 published studies</div></div>
-              <p class="uc-note">Scores reflect published clinical evidence for bisglycinate chelate at this dosage range. Scores &ge;80 indicate consistent findings across multiple RCTs.</p>
+              <div class="section-label">Potwierdzone działanie</div>
+              <div class="uc-item"><div class="uc-header"><span class="uc-label">Sen i regeneracja</span><span class="uc-score">92</span></div><div class="score-bar"><div class="score-bar-fill" data-score="92"></div></div><div class="uc-studies">14 badań klinicznych</div></div>
+              <div class="uc-item"><div class="uc-header"><span class="uc-label">Skurcze mięśni</span><span class="uc-score">88</span></div><div class="score-bar"><div class="score-bar-fill" data-score="88"></div></div><div class="uc-studies">11 badań klinicznych</div></div>
+              <div class="uc-item"><div class="uc-header"><span class="uc-label">Stres i wyciszenie</span><span class="uc-score">79</span></div><div class="score-bar"><div class="score-bar-fill" data-score="79"></div></div><div class="uc-studies">8 badań klinicznych</div></div>
+              <div class="uc-item"><div class="uc-header"><span class="uc-label">Zdrowie serca</span><span class="uc-score">74</span></div><div class="score-bar"><div class="score-bar-fill" data-score="74"></div></div><div class="uc-studies">6 badań klinicznych</div></div>
+              <div class="uc-item"><div class="uc-header"><span class="uc-label">Wsparcie kości</span><span class="uc-score">65</span></div><div class="score-bar"><div class="score-bar-fill" data-score="65"></div></div><div class="uc-studies">5 badań klinicznych</div></div>
+              <p class="uc-note">Wyniki oparte na publikacjach naukowych dot. chelatu diglicynianowego w zbliżonym dawkowaniu. Punktacja &ge;80 oznacza spójne rezultaty w wielu randomizowanych badaniach klinicznych (RCT).</p>
             </div>
             <div>
-              <div class="section-label">Suitability Guide</div>
-              <div class="suit-row"><span class="suit-who">Poor sleep quality</span><span class="suit-fit">Excellent</span></div>
-              <div class="suit-row"><span class="suit-who">Athletes &amp; active individuals</span><span class="suit-fit">Very Good</span></div>
-              <div class="suit-row"><span class="suit-who">Mg-depleting medication users</span><span class="suit-fit">Very Good</span></div>
-              <div class="suit-row"><span class="suit-who">Stress management</span><span class="suit-fit">Good</span></div>
-              <div class="suit-row"><span class="suit-who">General Mg maintenance</span><span class="suit-fit">Adequate</span></div>
+              <div class="section-label">Dla kogo</div>
+              <div class="suit-row"><span class="suit-who">Problemy ze snem</span><span class="suit-fit">Idealny</span></div>
+              <div class="suit-row"><span class="suit-who">Sportowcy i osoby aktywne</span><span class="suit-fit">Bardzo dobry</span></div>
+              <div class="suit-row"><span class="suit-who">Osoby na lekach zubożających Mg</span><span class="suit-fit">Bardzo dobry</span></div>
+              <div class="suit-row"><span class="suit-who">Przewlekły stres</span><span class="suit-fit">Dobry</span></div>
+              <div class="suit-row"><span class="suit-who">Codzienna suplementacja Mg</span><span class="suit-fit">Wystarczający</span></div>
               <div class="honest-box">
-                <div class="honest-title">Honest Assessment</div>
-                <p class="honest-text">If you only need basic magnesium and aren't sensitive to GI effects, magnesium oxide is 3&times; cheaper per serving. The premium here is for the chelated form's superior bioavailability and the cofactor stack.</p>
+                <div class="honest-title">Szczera ocena</div>
+                <p class="honest-text">Jeśli szukasz podstawowego magnezu i Twój żołądek dobrze znosi tańsze formy — tlenek magnezu jest 3&times; tańszy za dawkę. Wyższa cena tego produktu to koszt lepszej przyswajalności chelatu i zestawu kofaktorów wspomagających wchłanianie.</p>
               </div>
             </div>
           </div>
@@ -762,138 +773,141 @@
         <div class="tab-panel" id="tab-safety">
           <div class="two-col">
             <div>
-              <div class="section-label">Drug Interactions · 4 Known</div>
-              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--amber)"></div><span class="severity-label" style="color:var(--amber)">Moderate</span></div><div class="int-drug">Antibiotics (tetracyclines, quinolones)</div><div class="int-note">Space 2+ hours apart. Mg can reduce absorption.</div></div>
-              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--amber)"></div><span class="severity-label" style="color:var(--amber)">Moderate</span></div><div class="int-drug">Bisphosphonates</div><div class="int-note">Take at least 2 hours before magnesium.</div></div>
-              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--green)"></div><span class="severity-label" style="color:var(--green)">Low</span></div><div class="int-drug">Blood pressure medications</div><div class="int-note">May enhance hypotensive effects. Monitor.</div></div>
-              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--blue)"></div><span class="severity-label" style="color:var(--blue)">Informational</span></div><div class="int-drug">Diuretics (loop/thiazide)</div><div class="int-note">These increase Mg loss — supplementation often beneficial.</div></div>
+              <div class="section-label">Interakcje z lekami · 4 znane</div>
+              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--amber)"></div><span class="severity-label" style="color:var(--amber)">Umiarkowane</span></div><div class="int-drug">Antybiotyki (tetracykliny, chinolony)</div><div class="int-note">Zachowaj 2+ godziny odstępu. Mg może zmniejszyć wchłanianie.</div></div>
+              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--amber)"></div><span class="severity-label" style="color:var(--amber)">Umiarkowane</span></div><div class="int-drug">Bisfosfoniany</div><div class="int-note">Przyjmuj co najmniej 2 godziny przed magnezem.</div></div>
+              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--green)"></div><span class="severity-label" style="color:var(--green)">Niskie</span></div><div class="int-drug">Leki na nadciśnienie</div><div class="int-note">Mogą wzmocnić efekt hipotensyjny. Monitoruj.</div></div>
+              <div class="interaction-item"><div class="severity-badge"><div class="severity-dot" style="background:var(--blue)"></div><span class="severity-label" style="color:var(--blue)">Informacyjne</span></div><div class="int-drug">Diuretyki (pętlowe/tiazydowe)</div><div class="int-note">Zwiększają utratę Mg — suplementacja często korzystna.</div></div>
             </div>
             <div>
-              <div class="section-label">Side Effects</div>
-              <div class="se-row"><span class="se-name">Loose stools at high doses</span><span class="se-freq">Uncommon</span></div>
-              <div class="se-row"><span class="se-name">Drowsiness</span><span class="se-freq">Occasional</span></div>
+              <div class="section-label">Działania niepożądane</div>
+              <div class="se-row"><span class="se-name">Luźne stolce przy wysokich dawkach</span><span class="se-freq">Rzadko</span></div>
+              <div class="se-row"><span class="se-name">Senność</span><span class="se-freq">Sporadycznie</span></div>
               <div class="divider"></div>
-              <div class="section-label">Contraindications</div>
-              <div class="contra-row"><span class="contra-x">&cross;</span><span class="contra-text">Severe renal impairment (GFR &lt;30)</span></div>
-              <div class="contra-row"><span class="contra-x">&cross;</span><span class="contra-text">Myasthenia gravis</span></div>
+              <div class="section-label">Przeciwwskazania</div>
+              <div class="contra-row"><span class="contra-x">&cross;</span><span class="contra-text">Ciężka niewydolność nerek (GFR &lt;30)</span></div>
+              <div class="contra-row"><span class="contra-x">&cross;</span><span class="contra-text">Miastenia (myasthenia gravis)</span></div>
               <div class="divider"></div>
-              <div class="section-label">Pregnancy &amp; Nursing</div>
-              <p class="pregnancy-text">Generally considered safe. Consult physician for dosing.</p>
+              <div class="section-label">Ciąża i karmienie piersią</div>
+              <p class="pregnancy-text">Ogólnie uważany za bezpieczny. Skonsultuj dawkowanie z lekarzem.</p>
             </div>
           </div>
         </div>
 
         <!-- BENCHMARKS -->
         <div class="tab-panel" id="tab-benchmarks">
-          <div class="section-label">Product Benchmark — Top Magnesium Supplements</div>
-          <p class="bench-intro">How does this product stack up against the most popular magnesium supplements on the market? We compared form, dosage, third-party testing, cofactors, and cost across 8 leading products.</p>
+          <div class="section-label">Na tle konkurencji — top 8 suplementów magnezu</div>
+          <p class="bench-intro">Jak ten produkt wypada w porównaniu z bestsellerami? Zestawiliśmy formę, dawkę, certyfikaty, kofaktory i cenę za dawkę dzienną dla 8 najpopularniejszych magnezów na rynku.</p>
 
           <table class="bench-table">
             <thead>
               <tr>
-                <th>Product</th>
-                <th>Mg Form</th>
-                <th>Dose / Serving</th>
-                <th>Cofactors</th>
-                <th>3rd-Party Tested</th>
-                <th>Cost / Serving</th>
-                <th>Rating</th>
+                <th>Produkt</th>
+                <th>Forma Mg</th>
+                <th>Dawka / porcja</th>
+                <th>Kofaktory</th>
+                <th>Testy zewnętrzne</th>
+                <th>Koszt / dawka</th>
+                <th>Ocena</th>
               </tr>
             </thead>
             <tbody>
               <tr class="bench-highlight">
                 <td>Purecell Bisglycinate Complex</td>
-                <td>Bisglycinate</td>
+                <td>Diglicynian</td>
                 <td>200 mg</td>
-                <td>B6, Taurine, Zinc</td>
+                <td>B6, Tauryna, Cynk</td>
                 <td><span class="bench-badge high">NSF</span></td>
-                <td>$0.78</td>
+                <td>3,12 zł</td>
                 <td>4.7</td>
               </tr>
               <tr>
                 <td>Doctor's Best High Absorption</td>
-                <td>Bisglycinate</td>
+                <td>Diglicynian</td>
                 <td>200 mg</td>
-                <td>None</td>
-                <td><span class="bench-badge mid">In-house</span></td>
-                <td>$0.33</td>
+                <td>Brak</td>
+                <td><span class="bench-badge mid">Wewnętrzne</span></td>
+                <td>1,32 zł</td>
                 <td>4.6</td>
               </tr>
               <tr>
                 <td>Life Extension Magnesium</td>
-                <td>Citrate + Oxide</td>
+                <td>Cytrynian + Tlenek</td>
                 <td>500 mg</td>
-                <td>None</td>
+                <td>Brak</td>
                 <td><span class="bench-badge high">NSF</span></td>
-                <td>$0.25</td>
+                <td>1,00 zł</td>
                 <td>4.5</td>
               </tr>
               <tr>
                 <td>Thorne Magnesium Bisglycinate</td>
-                <td>Bisglycinate</td>
+                <td>Diglicynian</td>
                 <td>200 mg</td>
-                <td>None</td>
+                <td>Brak</td>
                 <td><span class="bench-badge high">NSF</span></td>
-                <td>$0.52</td>
+                <td>2,08 zł</td>
                 <td>4.6</td>
               </tr>
               <tr>
                 <td>NOW Foods Magnesium Citrate</td>
-                <td>Citrate</td>
+                <td>Cytrynian</td>
                 <td>200 mg</td>
-                <td>None</td>
+                <td>Brak</td>
                 <td><span class="bench-badge high">GMP</span></td>
-                <td>$0.18</td>
+                <td>0,72 zł</td>
                 <td>4.5</td>
               </tr>
               <tr>
                 <td>Natural Vitality Calm</td>
-                <td>Citrate (powder)</td>
+                <td>Cytrynian (proszek)</td>
                 <td>325 mg</td>
-                <td>None</td>
-                <td><span class="bench-badge mid">In-house</span></td>
-                <td>$0.48</td>
+                <td>Brak</td>
+                <td><span class="bench-badge mid">Wewnętrzne</span></td>
+                <td>1,92 zł</td>
                 <td>4.4</td>
               </tr>
               <tr>
-                <td>Magtein® (Magnesium L-Threonate)</td>
-                <td>L-Threonate</td>
-                <td>144 mg elemental</td>
-                <td>None</td>
+                <td>Magtein® (L-Treonian magnezu)</td>
+                <td>L-Treonian</td>
+                <td>144 mg pierwiastk.</td>
+                <td>Brak</td>
                 <td><span class="bench-badge high">NSF</span></td>
-                <td>$1.10</td>
+                <td>4,40 zł</td>
                 <td>4.3</td>
               </tr>
               <tr>
                 <td>Nature Made Magnesium Oxide</td>
-                <td>Oxide</td>
+                <td>Tlenek</td>
                 <td>400 mg</td>
-                <td>None</td>
+                <td>Brak</td>
                 <td><span class="bench-badge high">USP</span></td>
-                <td>$0.08</td>
+                <td>0,32 zł</td>
                 <td>4.2</td>
               </tr>
             </tbody>
           </table>
 
           <div class="bench-verdict">
-            <div class="bench-verdict-title">Benchmark Verdict</div>
-            <p class="bench-verdict-text">This product sits at a moderate premium vs. standalone bisglycinate competitors, but is the only formula that includes a cofactor stack (B6 + Taurine + Zinc). If cofactors matter to you — especially P5P for cellular Mg uptake — the price gap vs. Thorne or Doctor's Best is justified. If you just need basic magnesium with high bioavailability, Doctor's Best at $0.33/serving offers the best value in the chelated category.</p>
+            <div class="bench-verdict-title">Podsumowanie</div>
+            <p class="bench-verdict-text">Ten produkt kosztuje nieco więcej niż same chelaty diglicynianowe, ale jako jedyny na rynku zawiera komplet kofaktorów (B6 + tauryna + cynk). Jeśli zależy Ci na maksymalnym wchłanianiu — zwłaszcza dzięki P-5-P — dopłata względem Thorne czy Doctor's Best ma uzasadnienie. Szukasz po prostu dobrze przyswajalnego magnezu w niskiej cenie? Doctor's Best za 1,32 zł/dawkę to najlepsza oferta wśród chelatów.</p>
+          </div>
+          <div class="legal-disclaimer">
+            <strong>Informacja:</strong> Powyższe porównanie ma charakter wyłącznie informacyjny i edukacyjny. Nie stanowi rekomendacji zakupowej ani porady medycznej. Dane pochodzą z publicznie dostępnych informacji producentów i mogą ulec zmianie. Przed wyborem suplementu skonsultuj się z lekarzem lub farmaceutą.
           </div>
         </div>
 
         <!-- VALUE -->
         <div class="tab-panel" id="tab-value">
-          <div class="section-label">Cost Comparison by Magnesium Form</div>
-          <div class="val-table-head"><span>Product / Category</span><span>Cost per Serving</span><span>Mg per Serving</span><span>Form</span></div>
-          <div class="val-row highlight"><span>This product</span><span class="val-tnum">$0.78</span><span class="val-tnum">200 mg</span><span class="val-form">Bisglycinate</span></div>
-          <div class="val-row"><span>Chelated avg.</span><span class="val-tnum">$0.92</span><span class="val-tnum">200 mg</span><span class="val-form">Bisglycinate</span></div>
-          <div class="val-row"><span>Citrate avg.</span><span class="val-tnum">$0.54</span><span class="val-tnum">200 mg</span><span class="val-form">Citrate</span></div>
-          <div class="val-row"><span>Oxide avg.</span><span class="val-tnum">$0.31</span><span class="val-tnum">400 mg</span><span class="val-form">Oxide</span></div>
+          <div class="section-label">Koszt dzienny wg formy magnezu</div>
+          <div class="val-table-head"><span>Produkt / kategoria</span><span>Koszt / dawka</span><span>Mg / dawka</span><span>Forma</span></div>
+          <div class="val-row highlight"><span>Ten produkt</span><span class="val-tnum">3,12 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Diglicynian</span></div>
+          <div class="val-row"><span>Średnia — chelaty</span><span class="val-tnum">3,68 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Diglicynian</span></div>
+          <div class="val-row"><span>Średnia — cytrynian</span><span class="val-tnum">2,16 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Cytrynian</span></div>
+          <div class="val-row"><span>Średnia — tlenek</span><span class="val-tnum">1,24 zł</span><span class="val-tnum">400 mg</span><span class="val-form">Tlenek</span></div>
           <div class="val-summary">
-            <div class="val-metric"><div class="val-metric-label">Cost per Serving</div><div class="val-metric-value">$0.78</div><div class="val-metric-sub">15% below chelated average</div></div>
-            <div class="val-metric"><div class="val-metric-label">Cost per mg Active</div><div class="val-metric-value">$0.0039</div><div class="val-metric-sub">Elemental magnesium basis</div></div>
-            <div class="val-metric"><div class="val-metric-label">90-Day Supply</div><div class="val-metric-value">$69.98</div><div class="val-metric-sub">At 1 serving per day</div></div>
+            <div class="val-metric"><div class="val-metric-label">Koszt dzienny</div><div class="val-metric-value">3,12 zł</div><div class="val-metric-sub">15% taniej niż średnia chelatów</div></div>
+            <div class="val-metric"><div class="val-metric-label">Koszt za 1 mg Mg</div><div class="val-metric-value">0,016 zł</div><div class="val-metric-sub">W przeliczeniu na Mg pierwiastkowy</div></div>
+            <div class="val-metric"><div class="val-metric-label">Kuracja 90-dniowa</div><div class="val-metric-value">279,99 zł</div><div class="val-metric-sub">Przy 1 dawce dziennie</div></div>
           </div>
         </div>
 
@@ -901,9 +915,9 @@
         <div class="tab-panel" id="tab-reviews">
           <div class="reviews-grid">
             <div>
-              <div class="section-label">Distribution</div>
+              <div class="section-label">Rozkład ocen</div>
               <div class="rev-big-rating">4.7</div>
-              <div class="rev-count">2,847 verified</div>
+              <div class="rev-count">2 847 potwierdzonych zakupów</div>
               <div class="dist-row"><span class="dist-star">5</span><div class="dist-bar"><div class="dist-bar-fill" data-score="78"></div></div><span class="dist-pct">78%</span></div>
               <div class="dist-row"><span class="dist-star">4</span><div class="dist-bar"><div class="dist-bar-fill" data-score="14"></div></div><span class="dist-pct">14%</span></div>
               <div class="dist-row"><span class="dist-star">3</span><div class="dist-bar"><div class="dist-bar-fill" data-score="5"></div></div><span class="dist-pct">5%</span></div>
@@ -911,63 +925,69 @@
               <div class="dist-row"><span class="dist-star">1</span><div class="dist-bar"><div class="dist-bar-fill" data-score="1"></div></div><span class="dist-pct">1%</span></div>
             </div>
             <div>
-              <div class="section-label">Selected Reviews</div>
-              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Sleep</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Noticeably better sleep within a week. No morning grogginess.</p><span class="rev-helpful">234 found helpful</span></div>
-              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Tolerance</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Finally a magnesium that doesn't wreck my stomach. The bisglycinate form makes all the difference.</p><span class="rev-helpful">189 found helpful</span></div>
-              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">4.0</span><span class="rev-tag">Form Factor</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Good product but capsules are on the larger side. Takes 2 per serving.</p><span class="rev-helpful">102 found helpful</span></div>
+              <div class="section-label">Wybrane opinie</div>
+              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Sen</span></div><span class="rev-verified">Potwierdzony zakup</span></div><p class="rev-text">Wyraźna poprawa snu już po tygodniu. Rano bez uczucia ospałości.</p><span class="rev-helpful">234 osoby uznały za przydatne</span></div>
+              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Tolerancja</span></div><span class="rev-verified">Potwierdzony zakup</span></div><p class="rev-text">W końcu magnez, po którym nie boli mnie brzuch. Chelat diglicynianowy robi ogromną różnicę.</p><span class="rev-helpful">189 osób uznało za przydatne</span></div>
+              <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">4.0</span><span class="rev-tag">Postać</span></div><span class="rev-verified">Potwierdzony zakup</span></div><p class="rev-text">Dobry produkt, ale kapsułki mogłyby być mniejsze. Dziennie trzeba połknąć 2 sztuki.</p><span class="rev-helpful">102 osoby uznały za przydatne</span></div>
             </div>
           </div>
         </div>
 
         <!-- RECOMMENDATIONS -->
         <div class="recs-section">
-          <div class="section-label">You Might Also Like</div>
+          <div class="section-label">Może Cię zainteresować</div>
           <div class="recs-grid">
             <div class="rec-card">
               <div class="rec-img">🧬</div>
               <div class="rec-brand">Purecell Nutrition</div>
               <div class="rec-name">Vitamin D3 + K2 Complex</div>
-              <div class="rec-meta">5,000 IU D3 + 200 mcg K2 MK-7 · 60 softgels</div>
-              <div class="rec-price">$24.99</div>
-              <div class="rec-per">$0.42 per serving</div>
-              <div class="rec-rating">★ 4.8 · 1,923 reviews</div>
-              <button class="rec-add">Add to Cart</button>
+              <div class="rec-meta">5 000 IU D3 + 200 mcg K2 MK-7 · 60 kaps.</div>
+              <div class="rec-price">99,99 zł</div>
+              <div class="rec-per">1,67 zł / dawka</div>
+              <div class="rec-rating">★ 4.8 · 1 923 opinii</div>
+              <button class="rec-add">Do koszyka</button>
             </div>
             <div class="rec-card">
               <div class="rec-img">🧠</div>
               <div class="rec-brand">Purecell Nutrition</div>
               <div class="rec-name">Omega-3 Triple Strength</div>
-              <div class="rec-meta">2,400 mg EPA/DHA · IFOS 5-Star · 90 softgels</div>
-              <div class="rec-price">$39.99</div>
-              <div class="rec-per">$0.44 per serving</div>
-              <div class="rec-rating">★ 4.7 · 3,104 reviews</div>
-              <button class="rec-add">Add to Cart</button>
+              <div class="rec-meta">2 400 mg EPA/DHA · IFOS 5-Star · 90 kaps.</div>
+              <div class="rec-price">159,99 zł</div>
+              <div class="rec-per">1,78 zł / dawka</div>
+              <div class="rec-rating">★ 4.7 · 3 104 opinii</div>
+              <button class="rec-add">Do koszyka</button>
             </div>
             <div class="rec-card">
               <div class="rec-img">🌿</div>
               <div class="rec-brand">Purecell Nutrition</div>
               <div class="rec-name">Ashwagandha KSM-66</div>
-              <div class="rec-meta">600 mg full-spectrum extract · 90 capsules</div>
-              <div class="rec-price">$27.99</div>
-              <div class="rec-per">$0.31 per serving</div>
-              <div class="rec-rating">★ 4.6 · 2,218 reviews</div>
-              <button class="rec-add">Add to Cart</button>
+              <div class="rec-meta">600 mg ekstrakt pełnego spektrum · 90 kaps.</div>
+              <div class="rec-price">109,99 zł</div>
+              <div class="rec-per">1,22 zł / dawka</div>
+              <div class="rec-rating">★ 4.6 · 2 218 opinii</div>
+              <button class="rec-add">Do koszyka</button>
             </div>
             <div class="rec-card">
               <div class="rec-img">💪</div>
               <div class="rec-brand">Purecell Nutrition</div>
               <div class="rec-name">Zinc + Copper Balance</div>
-              <div class="rec-meta">30 mg Zinc Picolinate + 2 mg Copper · 120 caps</div>
-              <div class="rec-price">$18.99</div>
-              <div class="rec-per">$0.16 per serving</div>
-              <div class="rec-rating">★ 4.5 · 847 reviews</div>
-              <button class="rec-add">Add to Cart</button>
+              <div class="rec-meta">30 mg cynk pikolinian + 2 mg miedź · 120 kaps.</div>
+              <div class="rec-price">74,99 zł</div>
+              <div class="rec-per">0,62 zł / dawka</div>
+              <div class="rec-rating">★ 4.5 · 847 opinii</div>
+              <button class="rec-add">Do koszyka</button>
             </div>
+          </div>
+          <div class="legal-disclaimer">
+            <strong>Uwaga:</strong> Prezentowane produkty mają charakter informacyjny i nie stanowią porady medycznej, dietetycznej ani farmaceutycznej w rozumieniu obowiązujących przepisów. Suplementy diety nie mogą być stosowane jako substytut zróżnicowanej diety. Nie należy przekraczać zalecanej dawki dziennej. Przechowywać w miejscu niedostępnym dla małych dzieci. Przed zastosowaniem jakiegokolwiek suplementu diety skonsultuj się z lekarzem lub farmaceutą — w szczególności w przypadku ciąży, karmienia piersią, przyjmowania leków lub występowania chorób przewlekłych.
           </div>
         </div>
 
         <div class="page-footer">
-          <p>Transparency scores are calculated using publicly available clinical data, third-party lab results, and ingredient form analysis. They are not medical endorsements. Always consult a healthcare provider before starting any supplement.</p>
+          <p>Oceny jakości oparte na publicznie dostępnych danych klinicznych, wynikach niezależnych laboratoriów i analizie form składników. Nie stanowią porady medycznej. Przed rozpoczęciem suplementacji skonsultuj się z lekarzem lub farmaceutą.</p>
+          <div class="legal-footer-block">
+            <p><strong>Podstawa prawna:</strong> Treści zamieszczone na tej stronie mają charakter wyłącznie informacyjny i edukacyjny. Nie stanowią oferty handlowej w rozumieniu art. 66 §1 Kodeksu cywilnego, porady medycznej ani rekomendacji stosowania produktów leczniczych w rozumieniu ustawy z dnia 6 września 2001 r. — Prawo farmaceutyczne (Dz.U. 2001 Nr 126, poz. 1381 z późn. zm.). Oświadczenia zdrowotne dotyczące składników prezentowane są zgodnie z Rozporządzeniem (WE) nr 1924/2006 Parlamentu Europejskiego i Rady z dnia 20 grudnia 2006 r. w sprawie oświadczeń żywieniowych i zdrowotnych dotyczących żywności oraz z Rejestrem Oświadczeń Zdrowotnych UE. Suplement diety jest środkiem spożywczym, którego celem jest uzupełnienie normalnej diety (art. 3 ust. 3 pkt 39 ustawy z dnia 25 sierpnia 2006 r. o bezpieczeństwie żywności i żywienia). Zdrowie.pl nie ponosi odpowiedzialności za skutki wynikające z zastosowania informacji zawartych na stronie bez uprzedniej konsultacji ze specjalistą.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -978,21 +998,23 @@
 (function() {
   requestAnimationFrame(() => document.body.classList.add('loaded'));
 
-  const price = 34.99;
+  const price = 139.99;
   let qty = 1;
   const qtyDisplay = document.getElementById('qty-display');
   const cartBtn = document.getElementById('add-cart');
   const cartTotal = document.getElementById('cart-total');
+  function fmtPLN(v) { return v.toFixed(2).replace('.', ',') + ' z\u0142'; }
   function updateCart() {
     qtyDisplay.textContent = qty;
-    cartBtn.textContent = 'Add to Cart \u2014 $' + (price * qty).toFixed(2);
+    cartBtn.textContent = 'Do koszyka \u2014 ' + fmtPLN(price * qty);
   }
   document.getElementById('qty-minus').addEventListener('click', () => { qty = Math.max(1, qty - 1); updateCart(); });
   document.getElementById('qty-plus').addEventListener('click', () => { qty++; updateCart(); });
   cartBtn.addEventListener('click', () => {
-    const total = parseFloat(cartTotal.textContent.replace('$', '')) + price * qty;
-    cartTotal.textContent = '$' + total.toFixed(2);
-    cartBtn.textContent = '\u2713 Added!';
+    const cur = parseFloat(cartTotal.textContent.replace(/[^\d,]/g, '').replace(',', '.')) || 0;
+    const total = cur + price * qty;
+    cartTotal.textContent = fmtPLN(total);
+    cartBtn.textContent = '\u2713 Dodano!';
     setTimeout(() => updateCart(), 1200);
   });
 
