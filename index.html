@@ -156,7 +156,11 @@
   .rating-num { font-size: 22px; font-weight: 300; }
   .rating-sub { font-size: 11px; color: var(--light); }
   .certs { display: flex; gap: 6px; margin-top: 14px; flex-wrap: wrap; }
-  .cert { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; border: 1px solid var(--hairline); color: var(--mid); border-radius: 6px; }
+  .cert { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 5px 12px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; }
+  .cert-gmp { background: rgba(13,150,104,0.08); color: #0D9668; border: 1px solid rgba(13,150,104,0.2); }
+  .cert-nsf { background: rgba(74,111,165,0.08); color: #4A6FA5; border: 1px solid rgba(74,111,165,0.2); }
+  .cert-vegan { background: rgba(46,125,50,0.08); color: #2E7D32; border: 1px solid rgba(46,125,50,0.2); }
+  .cert-nongmo { background: rgba(217,119,6,0.08); color: #D97706; border: 1px solid rgba(217,119,6,0.2); }
 
   .product-img {
     aspect-ratio: 1/1; background: var(--bg); border-radius: 16px;
@@ -168,27 +172,33 @@
   .price { font-size: 32px; font-weight: 500; letter-spacing: -0.02em; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .price-sub { font-size: 12px; color: var(--mid); margin-bottom: 20px; margin-top: 4px; }
   .cart-row { display: flex; gap: 10px; margin-bottom: 10px; }
-  .qty-wrap { display: flex; border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; }
+  .qty-wrap { display: flex; border: 1px solid var(--hairline); border-radius: 20px; overflow: hidden; }
   .qty-btn { width: 40px; height: 44px; border: none; background: var(--white); cursor: pointer; font-size: 16px; color: var(--mid); transition: background 0.12s; }
   .qty-btn:hover { background: var(--bg); }
   .qty-display { width: 40px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; border-left: 1px solid var(--hairline); border-right: 1px solid var(--hairline); background: var(--white); }
-  .add-cart { flex: 1; height: 44px; background: var(--black); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 10px; transition: background 0.15s; }
+  .add-cart { flex: 1; height: 44px; background: var(--black); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 20px; transition: background 0.15s; }
   .add-cart:hover { background: #222; }
-  .subscribe-btn { width: 100%; height: 40px; background: transparent; border: 1px solid var(--hairline); border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); cursor: pointer; transition: border-color 0.15s; }
+  .subscribe-btn { width: 100%; height: 40px; background: transparent; border: 1px solid var(--hairline); border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); cursor: pointer; transition: border-color 0.15s; }
   .subscribe-btn:hover { border-color: var(--faint); }
   .perks { margin-top: 16px; font-size: 11px; color: var(--light); line-height: 2; }
 
   /* SCORES */
   .scores-section { padding: 40px 0; border-bottom: 1px solid var(--hairline); }
-  .metrics-row { display: flex; gap: 36px; }
-  .metric { flex: 1; }
-  .metric-number { font-size: 36px; font-weight: 300; letter-spacing: -0.03em; line-height: 1; margin-bottom: 8px; }
-  .metric-label { margin-top: 10px; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--light); }
+  .metrics-row { display: flex; gap: 20px; }
+  .metric { flex: 1; padding: 20px; border-radius: 16px; background: var(--bg); transition: transform 0.2s, box-shadow 0.2s; cursor: default; text-align: center; position: relative; }
+  .metric:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+  .metric-ring { width: 80px; height: 80px; margin: 0 auto 12px; position: relative; }
+  .metric-ring svg { transform: rotate(-90deg); }
+  .metric-ring-bg { fill: none; stroke: var(--hairline); stroke-width: 4; }
+  .metric-ring-fill { fill: none; stroke-width: 4; stroke-linecap: round; transition: stroke-dashoffset 1.2s cubic-bezier(0.16,1,0.3,1); }
+  .metric-number { font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+  .metric-label { margin-top: 4px; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.18em; color: var(--light); }
+  .metric-sublabel { font-size: 11px; color: var(--mid); margin-top: 6px; line-height: 1.4; }
   .scores-note { font-size: 11px; color: var(--light); margin-top: 24px; line-height: 1.6; max-width: 580px; }
 
   /* TABS */
-  .tab-nav { display: flex; gap: 4px; margin-top: 36px; margin-bottom: 36px; background: var(--bg); border-radius: 12px; padding: 4px; }
-  .tab-btn { flex: 1; padding: 11px 14px; border: none; cursor: pointer; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; background: transparent; color: var(--light); transition: all 0.2s; border-radius: 8px; }
+  .tab-nav { display: flex; gap: 4px; margin-top: 36px; margin-bottom: 36px; background: var(--bg); border-radius: 20px; padding: 4px; }
+  .tab-btn { flex: 1; padding: 11px 14px; border: none; cursor: pointer; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; background: transparent; color: var(--light); transition: all 0.2s; border-radius: 20px; }
   .tab-btn.active { background: var(--white); color: var(--black); box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
   .tab-btn:hover:not(.active) { color: var(--mid); }
   .tab-panel { display: none; }
@@ -277,11 +287,64 @@
   .page-footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--hairline); }
   .page-footer p { font-size: 10px; color: var(--light); line-height: 1.7; max-width: 580px; letter-spacing: 0.01em; }
 
+  /* ═══════ INGREDIENTS DEEP-DIVE ═══════ */
+  .ing-deep-intro { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 32px; max-width: 640px; }
+  .mg-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+  .mg-type-card { padding: 20px; border: 1px solid var(--hairline); border-radius: 12px; transition: box-shadow 0.2s; }
+  .mg-type-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .mg-type-card.highlighted { border-color: var(--accent); background: rgba(0,180,216,0.03); }
+  .mg-type-name { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .mg-type-formula { font-size: 11px; color: var(--light); font-family: monospace; margin-bottom: 10px; }
+  .mg-type-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 12px; }
+  .mg-type-row span:first-child { color: var(--light); text-transform: uppercase; letter-spacing: 0.08em; font-size: 9px; font-weight: 600; }
+  .mg-type-row span:last-child { font-weight: 500; font-feature-settings: 'tnum'; }
+  .bioavail-bar { height: 4px; background: var(--hairline); border-radius: 2px; margin-top: 10px; }
+  .bioavail-bar-fill { height: 100%; border-radius: 2px; transition: width 1s cubic-bezier(0.16,1,0.3,1); }
+  .mg-type-desc { font-size: 12px; color: var(--mid); line-height: 1.55; margin-top: 10px; }
+  .cofactor-section { margin-top: 36px; }
+  .cofactor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .cofactor-card { padding: 16px; background: var(--bg); border-radius: 10px; }
+  .cofactor-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+  .cofactor-role { font-size: 12px; color: var(--mid); line-height: 1.5; }
+
+  /* ═══════ BENCHMARKS ═══════ */
+  .bench-intro { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 28px; max-width: 640px; }
+  .bench-table { width: 100%; border-collapse: collapse; }
+  .bench-table thead th { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); text-align: left; padding: 0 12px 12px 0; border-bottom: 1px solid var(--black); }
+  .bench-table thead th:first-child { padding-left: 0; }
+  .bench-table tbody td { font-size: 13px; padding: 14px 12px 14px 0; border-bottom: 1px solid var(--hairline); vertical-align: middle; }
+  .bench-table tbody td:first-child { font-weight: 500; padding-left: 0; }
+  .bench-table tbody tr.bench-highlight { background: rgba(0,180,216,0.04); }
+  .bench-table tbody tr.bench-highlight td { font-weight: 600; }
+  .bench-badge { display: inline-block; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 4px; }
+  .bench-badge.high { background: rgba(13,150,104,0.1); color: var(--green); }
+  .bench-badge.mid { background: rgba(217,119,6,0.1); color: var(--amber); }
+  .bench-badge.low { background: rgba(199,0,0,0.1); color: var(--red); }
+  .bench-verdict { margin-top: 28px; padding: 20px; border: 1px solid var(--hairline); border-radius: 12px; }
+  .bench-verdict-title { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 8px; }
+  .bench-verdict-text { font-size: 13px; color: var(--mid); line-height: 1.65; }
+
+  /* ═══════ RECOMMENDATIONS ═══════ */
+  .recs-section { padding: 48px 0 0; }
+  .recs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .rec-card { border: 1px solid var(--hairline); border-radius: 12px; padding: 20px; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer; background: var(--white); }
+  .rec-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  .rec-img { aspect-ratio: 1/1; background: var(--bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 28px; }
+  .rec-brand { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--light); margin-bottom: 4px; }
+  .rec-name { font-size: 14px; font-weight: 500; margin-bottom: 6px; line-height: 1.3; }
+  .rec-meta { font-size: 11px; color: var(--light); margin-bottom: 10px; }
+  .rec-price { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+  .rec-per { font-size: 11px; color: var(--mid); margin-bottom: 12px; }
+  .rec-rating { font-size: 11px; color: var(--light); }
+  .rec-add { width: 100%; height: 36px; background: var(--bg); border: none; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark); cursor: pointer; margin-top: 12px; transition: background 0.15s; font-family: inherit; }
+  .rec-add:hover { background: var(--hairline); }
+
   /* ═══════ RESPONSIVE ═══════ */
   @media (max-width: 1024px) {
     :root { --sidebar-w: 200px; }
     .cat-item-en { display: none; }
     .container { padding: 0 28px 60px; }
+    .recs-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
     .sidebar { display: none; }
@@ -298,6 +361,11 @@
     .tab-nav { overflow-x: auto; flex-wrap: nowrap; }
     .tab-btn { white-space: nowrap; flex: 0 0 auto; }
     .top-link { display: none; }
+    .mg-type-grid { grid-template-columns: 1fr; }
+    .cofactor-grid { grid-template-columns: 1fr; }
+    .bench-table { font-size: 11px; }
+    .bench-table thead th, .bench-table tbody td { padding: 10px 6px 10px 0; }
+    .recs-grid { grid-template-columns: 1fr 1fr; }
   }
 </style>
 </head>
@@ -454,10 +522,10 @@
               <span class="rating-sub" style="margin-left:8px">2,847 verified reviews</span>
             </div>
             <div class="certs">
-              <span class="cert">GMP Certified</span>
-              <span class="cert">NSF Tested</span>
-              <span class="cert">Vegan</span>
-              <span class="cert">Non-GMO</span>
+              <span class="cert cert-gmp"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>GMP Certified</span>
+              <span class="cert cert-nsf"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>NSF Tested</span>
+              <span class="cert cert-vegan"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l2 2"/><path d="M20.59 3.41C22 4.82 22 12 22 12s-7.18 0-8.59-1.41a2.83 2.83 0 010-4l0 0a2.83 2.83 0 014 0l0 0c1.41 1.41 2.59 3.41 2.59 3.41"/></svg>Vegan</span>
+              <span class="cert cert-nongmo"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>Non-GMO</span>
             </div>
           </div>
 
@@ -471,7 +539,7 @@
                 touch-action="pan-y"
                 shadow-intensity="0.4"
                 exposure="1.1"
-                style="width: 100%; height: 100%; --poster-color: transparent;"
+                style="width: 100%; height: 70%; --poster-color: transparent;"
               ></model-viewer>
             </div>
             <div class="price">$34.99</div>
@@ -497,19 +565,61 @@
         <div class="scores-section">
           <div class="section-label">Transparency Dashboard</div>
           <div class="metrics-row">
-            <div class="metric"><div class="metric-number" data-target="87">0</div><div class="score-bar"><div class="score-bar-fill" data-score="87"></div></div><div class="metric-label">Evidence</div></div>
-            <div class="metric"><div class="metric-number" data-target="82">0</div><div class="score-bar"><div class="score-bar-fill" data-score="82"></div></div><div class="metric-label">Value</div></div>
-            <div class="metric"><div class="metric-number" data-target="95">0</div><div class="score-bar"><div class="score-bar-fill" data-score="95"></div></div><div class="metric-label">Purity</div></div>
-            <div class="metric"><div class="metric-number" data-target="91">0</div><div class="score-bar"><div class="score-bar-fill" data-score="91"></div></div><div class="metric-label">Transparency</div></div>
+            <div class="metric" data-tooltip="Based on 14 peer-reviewed studies and 3 meta-analyses supporting bisglycinate efficacy.">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
+                  <circle class="metric-ring-fill" cx="40" cy="40" r="34" stroke="#0D9668" data-ring="87" style="stroke-dasharray: 213.6; stroke-dashoffset: 213.6;"/>
+                </svg>
+                <div class="metric-number" data-target="87" style="color:#0D9668">0</div>
+              </div>
+              <div class="metric-label">Evidence</div>
+              <div class="metric-sublabel">14 clinical studies</div>
+            </div>
+            <div class="metric" data-tooltip="15% below average price for chelated magnesium with cofactors included.">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
+                  <circle class="metric-ring-fill" cx="40" cy="40" r="34" stroke="#4A6FA5" data-ring="82" style="stroke-dasharray: 213.6; stroke-dashoffset: 213.6;"/>
+                </svg>
+                <div class="metric-number" data-target="82" style="color:#4A6FA5">0</div>
+              </div>
+              <div class="metric-label">Value</div>
+              <div class="metric-sublabel">$0.78 per serving</div>
+            </div>
+            <div class="metric" data-tooltip="NSF certified, free from heavy metals, solvents, and microbial contaminants.">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
+                  <circle class="metric-ring-fill" cx="40" cy="40" r="34" stroke="#00B4D8" data-ring="95" style="stroke-dasharray: 213.6; stroke-dashoffset: 213.6;"/>
+                </svg>
+                <div class="metric-number" data-target="95" style="color:#00B4D8">0</div>
+              </div>
+              <div class="metric-label">Purity</div>
+              <div class="metric-sublabel">NSF certified</div>
+            </div>
+            <div class="metric" data-tooltip="Full INCI disclosure, third-party CoA available, TRAACS® verified chelation.">
+              <div class="metric-ring">
+                <svg viewBox="0 0 80 80" width="80" height="80">
+                  <circle class="metric-ring-bg" cx="40" cy="40" r="34"/>
+                  <circle class="metric-ring-fill" cx="40" cy="40" r="34" stroke="#D97706" data-ring="91" style="stroke-dasharray: 213.6; stroke-dashoffset: 213.6;"/>
+                </svg>
+                <div class="metric-number" data-target="91" style="color:#D97706">0</div>
+              </div>
+              <div class="metric-label">Transparency</div>
+              <div class="metric-sublabel">Full CoA available</div>
+            </div>
           </div>
-          <p class="scores-note">Composite scores derived from peer-reviewed evidence, third-party lab analysis, label accuracy audits, and cost-effectiveness benchmarks.</p>
+          <p class="scores-note">Composite scores derived from peer-reviewed evidence, third-party lab analysis, label accuracy audits, and cost-effectiveness benchmarks. Hover each card for details.</p>
         </div>
 
         <!-- TABS -->
         <div class="tab-nav">
           <button class="tab-btn active" data-tab="composition">Composition</button>
+          <button class="tab-btn" data-tab="ingredients">Ingredients</button>
           <button class="tab-btn" data-tab="usecases">Use Cases</button>
           <button class="tab-btn" data-tab="safety">Safety</button>
+          <button class="tab-btn" data-tab="benchmarks">Benchmarks</button>
           <button class="tab-btn" data-tab="value">Value</button>
           <button class="tab-btn" data-tab="reviews">Reviews</button>
         </div>
@@ -526,6 +636,98 @@
           <div class="two-col">
             <div><div class="section-label">Other Ingredients</div><p class="other-ing-text">Hypromellose (capsule), Microcrystalline Cellulose, Silicon Dioxide</p></div>
             <div><div class="section-label">Allergen Statement</div><div class="allergen-tags"><span class="allergen-tag">Gluten-free</span><span class="allergen-tag">Dairy-free</span><span class="allergen-tag">Soy-free</span><span class="allergen-tag">Egg-free</span><span class="allergen-tag">Vegan</span></div></div>
+          </div>
+        </div>
+
+        <!-- INGREDIENTS DEEP-DIVE -->
+        <div class="tab-panel" id="tab-ingredients">
+          <div class="section-label">Magnesium Forms — Bioavailability Comparison</div>
+          <p class="ing-deep-intro">Not all magnesium is equal. The form determines how much your body actually absorbs. This product uses bisglycinate chelate — one of the most bioavailable forms, bound to the amino acid glycine for gentle absorption without GI distress.</p>
+
+          <div class="mg-type-grid">
+            <div class="mg-type-card highlighted">
+              <div class="mg-type-name">Magnesium Bisglycinate</div>
+              <div class="mg-type-formula">Mg(C₂H₄NO₂)₂</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~80%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>14.1%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Excellent</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="80" style="background:var(--accent)"></div></div>
+              <p class="mg-type-desc">Chelated to glycine via TRAACS® process. Absorbed through amino acid pathways, bypassing common mineral transport bottlenecks. Best for sleep, stress, and muscle recovery. Used in this product.</p>
+            </div>
+
+            <div class="mg-type-card">
+              <div class="mg-type-name">Magnesium Citrate</div>
+              <div class="mg-type-formula">Mg₃(C₆H₅O₇)₂</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~65%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>16.2%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--amber)">Moderate</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="65" style="background:var(--green)"></div></div>
+              <p class="mg-type-desc">Bound to citric acid. Good absorption but may cause loose stools at higher doses. Popular general-purpose form, widely used in clinical studies.</p>
+            </div>
+
+            <div class="mg-type-card">
+              <div class="mg-type-name">Magnesium L-Threonate</div>
+              <div class="mg-type-formula">Mg(C₄H₇O₅)₂</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~70%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>7.2%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Good</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>1,500–2,000 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="70" style="background:var(--blue)"></div></div>
+              <p class="mg-type-desc">Patented Magtein® form. Uniquely crosses the blood-brain barrier. Best for cognitive function and memory. Very low elemental Mg — not ideal as sole magnesium source.</p>
+            </div>
+
+            <div class="mg-type-card">
+              <div class="mg-type-name">Magnesium Taurate</div>
+              <div class="mg-type-formula">Mg(C₂H₆NO₃S)₂</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~60%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>8.9%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Excellent</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="60" style="background:var(--blue)"></div></div>
+              <p class="mg-type-desc">Bound to taurine amino acid. Favored for cardiovascular support due to synergistic taurine effects on heart rhythm and blood pressure regulation.</p>
+            </div>
+
+            <div class="mg-type-card">
+              <div class="mg-type-name">Magnesium Malate</div>
+              <div class="mg-type-formula">MgC₄H₄O₅</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--green)">~55%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>15.1%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--green)">Good</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>200–400 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="55" style="background:var(--blue)"></div></div>
+              <p class="mg-type-desc">Bound to malic acid (from apples). Popular for energy and fibromyalgia support. Malic acid is involved in the Krebs cycle, making it relevant for ATP production.</p>
+            </div>
+
+            <div class="mg-type-card">
+              <div class="mg-type-name">Magnesium Oxide</div>
+              <div class="mg-type-formula">MgO</div>
+              <div class="mg-type-row"><span>Bioavailability</span><span style="color:var(--red)">~4%</span></div>
+              <div class="mg-type-row"><span>Elemental Mg</span><span>60.3%</span></div>
+              <div class="mg-type-row"><span>GI Tolerance</span><span style="color:var(--red)">Poor</span></div>
+              <div class="mg-type-row"><span>Typical Dose</span><span>400–800 mg</span></div>
+              <div class="bioavail-bar"><div class="bioavail-bar-fill" data-score="4" style="background:var(--red)"></div></div>
+              <p class="mg-type-desc">Cheapest form with highest elemental Mg but extremely poor absorption (~4%). Primarily acts as an osmotic laxative. Not recommended for correcting deficiency.</p>
+            </div>
+          </div>
+
+          <div class="cofactor-section">
+            <div class="section-label">Cofactors in This Formula</div>
+            <div class="cofactor-grid">
+              <div class="cofactor-card">
+                <div class="cofactor-name">Vitamin B6 (P5P)</div>
+                <div class="cofactor-role">Active coenzyme form of B6. Facilitates magnesium transport into cells via membrane channels. Studies show 24% higher intracellular Mg retention when co-administered with P5P vs. magnesium alone.</div>
+              </div>
+              <div class="cofactor-card">
+                <div class="cofactor-name">Taurine</div>
+                <div class="cofactor-role">Conditionally essential amino acid that synergizes with magnesium for cardiac and neural function. Supports GABA receptor sensitivity, amplifying Mg's calming effects on the nervous system.</div>
+              </div>
+              <div class="cofactor-card">
+                <div class="cofactor-name">Zinc Bisglycinate</div>
+                <div class="cofactor-role">Low-dose chelated zinc (5 mg) supports over 300 enzymatic reactions that also require magnesium as a cofactor. Chelated form avoids GI irritation and competitive absorption issues.</div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -581,6 +783,105 @@
           </div>
         </div>
 
+        <!-- BENCHMARKS -->
+        <div class="tab-panel" id="tab-benchmarks">
+          <div class="section-label">Product Benchmark — Top Magnesium Supplements</div>
+          <p class="bench-intro">How does this product stack up against the most popular magnesium supplements on the market? We compared form, dosage, third-party testing, cofactors, and cost across 8 leading products.</p>
+
+          <table class="bench-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Mg Form</th>
+                <th>Dose / Serving</th>
+                <th>Cofactors</th>
+                <th>3rd-Party Tested</th>
+                <th>Cost / Serving</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bench-highlight">
+                <td>Purecell Bisglycinate Complex</td>
+                <td>Bisglycinate</td>
+                <td>200 mg</td>
+                <td>B6, Taurine, Zinc</td>
+                <td><span class="bench-badge high">NSF</span></td>
+                <td>$0.78</td>
+                <td>4.7</td>
+              </tr>
+              <tr>
+                <td>Doctor's Best High Absorption</td>
+                <td>Bisglycinate</td>
+                <td>200 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge mid">In-house</span></td>
+                <td>$0.33</td>
+                <td>4.6</td>
+              </tr>
+              <tr>
+                <td>Life Extension Magnesium</td>
+                <td>Citrate + Oxide</td>
+                <td>500 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge high">NSF</span></td>
+                <td>$0.25</td>
+                <td>4.5</td>
+              </tr>
+              <tr>
+                <td>Thorne Magnesium Bisglycinate</td>
+                <td>Bisglycinate</td>
+                <td>200 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge high">NSF</span></td>
+                <td>$0.52</td>
+                <td>4.6</td>
+              </tr>
+              <tr>
+                <td>NOW Foods Magnesium Citrate</td>
+                <td>Citrate</td>
+                <td>200 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge high">GMP</span></td>
+                <td>$0.18</td>
+                <td>4.5</td>
+              </tr>
+              <tr>
+                <td>Natural Vitality Calm</td>
+                <td>Citrate (powder)</td>
+                <td>325 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge mid">In-house</span></td>
+                <td>$0.48</td>
+                <td>4.4</td>
+              </tr>
+              <tr>
+                <td>Magtein® (Magnesium L-Threonate)</td>
+                <td>L-Threonate</td>
+                <td>144 mg elemental</td>
+                <td>None</td>
+                <td><span class="bench-badge high">NSF</span></td>
+                <td>$1.10</td>
+                <td>4.3</td>
+              </tr>
+              <tr>
+                <td>Nature Made Magnesium Oxide</td>
+                <td>Oxide</td>
+                <td>400 mg</td>
+                <td>None</td>
+                <td><span class="bench-badge high">USP</span></td>
+                <td>$0.08</td>
+                <td>4.2</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="bench-verdict">
+            <div class="bench-verdict-title">Benchmark Verdict</div>
+            <p class="bench-verdict-text">This product sits at a moderate premium vs. standalone bisglycinate competitors, but is the only formula that includes a cofactor stack (B6 + Taurine + Zinc). If cofactors matter to you — especially P5P for cellular Mg uptake — the price gap vs. Thorne or Doctor's Best is justified. If you just need basic magnesium with high bioavailability, Doctor's Best at $0.33/serving offers the best value in the chelated category.</p>
+          </div>
+        </div>
+
         <!-- VALUE -->
         <div class="tab-panel" id="tab-value">
           <div class="section-label">Cost Comparison by Magnesium Form</div>
@@ -614,6 +915,53 @@
               <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Sleep</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Noticeably better sleep within a week. No morning grogginess.</p><span class="rev-helpful">234 found helpful</span></div>
               <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">5.0</span><span class="rev-tag">Tolerance</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Finally a magnesium that doesn't wreck my stomach. The bisglycinate form makes all the difference.</p><span class="rev-helpful">189 found helpful</span></div>
               <div class="rev-item"><div class="rev-header"><div class="rev-left"><span class="rev-rating">4.0</span><span class="rev-tag">Form Factor</span></div><span class="rev-verified">Verified Purchase</span></div><p class="rev-text">Good product but capsules are on the larger side. Takes 2 per serving.</p><span class="rev-helpful">102 found helpful</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECOMMENDATIONS -->
+        <div class="recs-section">
+          <div class="section-label">You Might Also Like</div>
+          <div class="recs-grid">
+            <div class="rec-card">
+              <div class="rec-img">🧬</div>
+              <div class="rec-brand">Purecell Nutrition</div>
+              <div class="rec-name">Vitamin D3 + K2 Complex</div>
+              <div class="rec-meta">5,000 IU D3 + 200 mcg K2 MK-7 · 60 softgels</div>
+              <div class="rec-price">$24.99</div>
+              <div class="rec-per">$0.42 per serving</div>
+              <div class="rec-rating">★ 4.8 · 1,923 reviews</div>
+              <button class="rec-add">Add to Cart</button>
+            </div>
+            <div class="rec-card">
+              <div class="rec-img">🧠</div>
+              <div class="rec-brand">Purecell Nutrition</div>
+              <div class="rec-name">Omega-3 Triple Strength</div>
+              <div class="rec-meta">2,400 mg EPA/DHA · IFOS 5-Star · 90 softgels</div>
+              <div class="rec-price">$39.99</div>
+              <div class="rec-per">$0.44 per serving</div>
+              <div class="rec-rating">★ 4.7 · 3,104 reviews</div>
+              <button class="rec-add">Add to Cart</button>
+            </div>
+            <div class="rec-card">
+              <div class="rec-img">🌿</div>
+              <div class="rec-brand">Purecell Nutrition</div>
+              <div class="rec-name">Ashwagandha KSM-66</div>
+              <div class="rec-meta">600 mg full-spectrum extract · 90 capsules</div>
+              <div class="rec-price">$27.99</div>
+              <div class="rec-per">$0.31 per serving</div>
+              <div class="rec-rating">★ 4.6 · 2,218 reviews</div>
+              <button class="rec-add">Add to Cart</button>
+            </div>
+            <div class="rec-card">
+              <div class="rec-img">💪</div>
+              <div class="rec-brand">Purecell Nutrition</div>
+              <div class="rec-name">Zinc + Copper Balance</div>
+              <div class="rec-meta">30 mg Zinc Picolinate + 2 mg Copper · 120 caps</div>
+              <div class="rec-price">$18.99</div>
+              <div class="rec-per">$0.16 per serving</div>
+              <div class="rec-rating">★ 4.5 · 847 reviews</div>
+              <button class="rec-add">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -670,10 +1018,18 @@
   });
 
   function animateBars(scope) {
-    const fills = (scope || document).querySelectorAll('.score-bar-fill, .dist-bar-fill');
+    const fills = (scope || document).querySelectorAll('.score-bar-fill, .dist-bar-fill, .bioavail-bar-fill');
     fills.forEach((el, i) => {
       el.style.width = '0';
       setTimeout(() => { el.style.width = el.dataset.score + '%'; }, 80 + i * 60);
+    });
+  }
+  function animateRings() {
+    document.querySelectorAll('.metric-ring-fill[data-ring]').forEach((el, i) => {
+      const pct = parseInt(el.dataset.ring);
+      const circ = 2 * Math.PI * 34; // r=34
+      const offset = circ - (circ * pct / 100);
+      setTimeout(() => { el.style.strokeDashoffset = offset; }, 100 + i * 150);
     });
   }
   function animateMetrics() {
@@ -686,7 +1042,25 @@
       }, i * 80);
     });
   }
-  setTimeout(() => { animateBars(document); animateMetrics(); }, 100);
+  // Tooltip on hover for metric cards
+  document.querySelectorAll('.metric[data-tooltip]').forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      let tip = this.querySelector('.metric-tip');
+      if (!tip) {
+        tip = document.createElement('div');
+        tip.className = 'metric-tip';
+        tip.textContent = this.dataset.tooltip;
+        tip.style.cssText = 'position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--black);color:var(--white);font-size:11px;padding:8px 14px;border-radius:10px;max-width:220px;line-height:1.45;white-space:normal;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.2s;text-align:center;';
+        this.appendChild(tip);
+      }
+      requestAnimationFrame(() => { tip.style.opacity = '1'; });
+    });
+    card.addEventListener('mouseleave', function() {
+      const tip = this.querySelector('.metric-tip');
+      if (tip) tip.style.opacity = '0';
+    });
+  });
+  setTimeout(() => { animateBars(document); animateRings(); animateMetrics(); }, 100);
 })();
 </script>
 </body>
