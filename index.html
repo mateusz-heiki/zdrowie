@@ -70,6 +70,7 @@
     overflow-y: auto;
     padding: 20px 0 32px;
     scrollbar-width: thin; scrollbar-color: transparent transparent;
+    z-index: 2;
   }
   .sidebar:hover { scrollbar-color: var(--hairline) transparent; }
   .sidebar::-webkit-scrollbar { width: 3px; }
@@ -118,7 +119,8 @@
     background: var(--white);
     border-radius: 20px 0 0 0;
     min-height: calc(100vh - 60px);
-    box-shadow: -1px 0 12px rgba(0,0,0,0.03);
+    box-shadow: 0 0 12px rgba(0,0,0,0.03);
+    position: relative; z-index: 1;
   }
 
   .breadcrumb {
@@ -1214,13 +1216,28 @@
     });
   });
 
-  // Mobile hamburger menu
+  // Mobile hamburger menu — only clone on mobile to avoid duplicate SVG gradient IDs in Chrome
   const menuToggle = document.getElementById('menu-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
   const sidebar = document.getElementById('main-sidebar');
   if (menuToggle && mobileDrawer && sidebar) {
-    // Clone sidebar content into mobile drawer
-    mobileDrawer.innerHTML = sidebar.innerHTML;
+    function populateDrawer() {
+      if (window.innerWidth <= 768 && !mobileDrawer.hasChildNodes()) {
+        mobileDrawer.innerHTML = sidebar.innerHTML;
+        // Re-bindclose handlers
+        mobileDrawer.querySelectorAll('.cat-item').forEach(item => {
+          item.addEventListener('click', () => {
+            mobileDrawer.classList.remove('open');
+            menuToggle.classList.remove('open');
+            document.body.style.overflow = '';
+          });
+        });
+      } else if (window.innerWidth > 768 && mobileDrawer.hasChildNodes()) {
+        mobileDrawer.innerHTML = '';
+      }
+    }
+    populateDrawer();
+    window.addEventListener('resize', populateDrawer);
     menuToggle.addEventListener('click', function() {
       const isOpen = mobileDrawer.classList.contains('open');
       if (isOpen) {
@@ -1232,14 +1249,6 @@
         menuToggle.classList.add('open');
         document.body.style.overflow = 'hidden';
       }
-    });
-    // Close drawer on category click
-    mobileDrawer.querySelectorAll('.cat-item').forEach(item => {
-      item.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        menuToggle.classList.remove('open');
-        document.body.style.overflow = '';
-      });
     });
   }
 
