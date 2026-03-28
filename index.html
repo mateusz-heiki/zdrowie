@@ -356,26 +356,107 @@
     .container { padding: 0 28px 60px; }
     .recs-grid { grid-template-columns: repeat(2, 1fr); }
   }
+  /* ═══════ MOBILE MENU ═══════ */
+  .menu-toggle {
+    display: none; width: 36px; height: 36px; border: none; background: transparent;
+    cursor: pointer; flex-shrink: 0; position: relative; padding: 0;
+  }
+  .menu-toggle span {
+    display: block; width: 20px; height: 2px; background: var(--black);
+    border-radius: 1px; position: absolute; left: 8px; transition: all 0.25s;
+  }
+  .menu-toggle span:nth-child(1) { top: 10px; }
+  .menu-toggle span:nth-child(2) { top: 17px; }
+  .menu-toggle span:nth-child(3) { top: 24px; }
+  .menu-toggle.open span:nth-child(1) { top: 17px; transform: rotate(45deg); }
+  .menu-toggle.open span:nth-child(2) { opacity: 0; }
+  .menu-toggle.open span:nth-child(3) { top: 17px; transform: rotate(-45deg); }
+  .mobile-drawer {
+    display: none; position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
+    background: var(--bg); z-index: 99; overflow-y: auto; padding: 12px 0 32px;
+    transform: translateY(-10px); opacity: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .mobile-drawer.open { transform: translateY(0); opacity: 1; }
+  .mobile-drawer .cat-item { margin-right: 16px; margin-left: 8px; padding: 10px 20px; }
+  .mobile-drawer .cat-item svg { width: 28px; height: 28px; }
+  .mobile-drawer .sidebar-section-label { padding: 8px 20px 10px; }
+  .mobile-drawer .sidebar-divider { margin: 12px 20px; }
+  .mobile-drawer .sidebar-highlight { margin: 5px 16px 5px 20px; }
+
   @media (max-width: 768px) {
     .sidebar { display: none; }
     :root { --sidebar-w: 0px; }
+    .menu-toggle { display: block; }
+    .mobile-drawer { display: block; pointer-events: none; }
+    .mobile-drawer.open { pointer-events: auto; }
+
+    /* TOP BAR — stack logo/search, hide search when small */
+    .top-bar-inner { padding: 0 12px; gap: 8px; }
+    .logo { width: auto; font-size: 15px; letter-spacing: 0.1em; }
+    .search-bar { min-width: 0; height: 34px; font-size: 12px; padding: 0 14px; }
+    .top-link { display: none; }
+    .cart-badge { height: 34px; padding: 0 12px; font-size: 11px; }
+
     .main-inner { border-radius: 0; }
-    .hero, .two-col, .reviews-grid { grid-template-columns: 1fr; }
-    .ing-table-head, .ing-row { grid-template-columns: 1fr; gap: 4px; }
-    .val-table-head, .val-row { grid-template-columns: 1fr; gap: 4px; }
+    .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 20px; padding-bottom: 32px; }
+    h1 { font-size: 26px; }
+    .short-desc { font-size: 14px; max-width: 100%; }
+    .quick-facts { grid-template-columns: repeat(2, 1fr); }
+    .fact:nth-child(odd) { border-right: 1px solid var(--hairline); padding-right: 14px; }
+    .fact:nth-child(even) { padding-left: 14px; border-right: none; }
+    .fact:nth-child(n+3) { border-top: 1px solid var(--hairline); }
+
+    .two-col, .reviews-grid { grid-template-columns: 1fr; gap: 24px; }
+
+    /* TABLES — horizontal scroll wrapper */
+    .ing-table-wrap, .bench-table-wrap, .val-table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      margin: 0 -16px; padding: 0 16px;
+    }
+    .ing-table-head, .ing-row { min-width: 600px; }
+    .val-table-head, .val-row { min-width: 420px; }
+    .bench-table { min-width: 640px; font-size: 11px; }
+    .bench-table thead th, .bench-table tbody td { padding: 10px 8px 10px 0; }
+
     .val-summary { grid-template-columns: 1fr; }
     .val-metric:not(:last-child) { border-right: none; border-bottom: 1px solid var(--hairline); padding-right: 0; padding-bottom: 24px; }
     .val-metric:not(:first-child) { padding-left: 0; padding-top: 24px; }
+
     .container { padding: 0 16px 48px; }
-    .breadcrumb { padding: 12px 16px; }
-    .tab-nav { overflow-x: auto; flex-wrap: nowrap; }
-    .tab-btn { white-space: nowrap; flex: 0 0 auto; }
-    .top-link { display: none; }
+    .breadcrumb { padding: 12px 16px; font-size: 9px; }
+
+    /* TABS — scrollable */
+    .tab-nav { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+    .tab-btn { white-space: nowrap; flex: 0 0 auto; font-size: 10px; padding: 10px 12px; }
+
     .mg-type-grid { grid-template-columns: 1fr; }
     .cofactor-grid { grid-template-columns: 1fr; }
-    .bench-table { font-size: 11px; }
-    .bench-table thead th, .bench-table tbody td { padding: 10px 6px 10px 0; }
-    .recs-grid { grid-template-columns: 1fr 1fr; }
+
+    /* METRICS — 2x2 grid */
+    .metrics-row { flex-wrap: wrap; gap: 12px; }
+    .metric { flex: 1 1 calc(50% - 6px); min-width: calc(50% - 6px); padding: 16px; }
+    .metric-ring { width: 60px; height: 60px; }
+
+    .recs-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .rec-card { padding: 14px; }
+    .rec-name { font-size: 13px; }
+
+    /* PRICE / CART */
+    .price { font-size: 26px; }
+    .cart-row { flex-direction: column; gap: 8px; }
+    .add-cart { width: 100%; }
+
+    .legal-disclaimer { font-size: 10px; padding: 12px 14px; }
+  }
+
+  @media (max-width: 420px) {
+    .search-bar { display: none; }
+    .recs-grid { grid-template-columns: 1fr; }
+    .quick-facts { grid-template-columns: 1fr; }
+    .fact { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+    .fact:not(:last-child) { border-bottom: 1px solid var(--hairline); padding-bottom: 12px; }
+    .metric { flex: 1 1 100%; min-width: 100%; }
   }
 </style>
 </head>
@@ -384,6 +465,7 @@
 <!-- ═══════ TOP BAR ═══════ -->
 <div class="top-bar">
   <div class="top-bar-inner">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="logo">Zdrowie.pl</div>
     <input class="search-bar" type="text" placeholder="Szukaj suplementów, witamin, leków OTC...">
     <div class="top-right">
@@ -398,11 +480,14 @@
   </div>
 </div>
 
+<!-- ═══════ MOBILE DRAWER ═══════ -->
+<nav class="mobile-drawer" id="mobile-drawer"></nav>
+
 <!-- ═══════ UNIFIED LAYOUT ═══════ -->
 <div class="page-layout">
 
   <!-- SIDEBAR — shares same background as page -->
-  <aside class="sidebar">
+  <aside class="sidebar" id="main-sidebar">
     <a class="cat-item" href="#" style="margin-top: 4px;">
       <svg viewBox="0 0 56 56" fill="none"><defs><linearGradient id="v1" x1="28" y1="4" x2="28" y2="52" gradientUnits="userSpaceOnUse"><stop stop-color="#FFB347"/><stop offset="1" stop-color="#E07B00"/></linearGradient></defs><rect x="14" y="4" width="28" height="48" rx="14" fill="url(#v1)"/><rect x="14" y="4" width="28" height="24" rx="14" fill="#fff" opacity=".32"/><line x1="15" y1="28" x2="41" y2="28" stroke="#fff" stroke-width="1.2" opacity=".45"/></svg>
       <div class="cat-item-text"><div class="cat-item-pl">Witaminy</div><div class="cat-item-en">Vitamins</div></div>
@@ -638,11 +723,12 @@
         <!-- COMPOSITION -->
         <div class="tab-panel active" id="tab-composition">
           <div class="section-label">Tabela składników</div>
-          <div class="ing-table-head"><span>Składnik</span><span>Forma</span><span>Zawartość</span><span>% NRV</span><span>Badania</span><span>Uwagi</span></div>
+          <div class="ing-table-wrap"><div class="ing-table-head"><span>Składnik</span><span>Forma</span><span>Zawartość</span><span>% NRV</span><span>Badania</span><span>Uwagi</span></div>
           <div class="ing-row"><div><div class="ing-name">Magnez</div></div><span class="ing-form">Chelat diglicynianowy</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">48%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Mocne</span></div><span class="ing-notes">TRAACS® — najwyższa klasa przyswajalności</span></div>
           <div class="ing-row"><div><div class="ing-name">Witamina B6</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">P-5-P (pirydoksal-5-fosforan)</span><span class="ing-amount">10 mg</span><span class="ing-dv" style="color:var(--black);font-weight:600">588%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--black)"></div><span class="evidence-label" style="color:var(--black)">Mocne</span></div><span class="ing-notes">Aktywna forma koenzymu. Ułatwia transport Mg do komórek.</span></div>
           <div class="ing-row"><div><div class="ing-name">Tauryna</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">L-tauryna (wolna forma)</span><span class="ing-amount">200 mg</span><span class="ing-dv" style="color:var(--mid)">&mdash;</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Średnie</span></div><span class="ing-notes">Wspomaga pracę serca i układu nerwowego w synergii z Mg.</span></div>
           <div class="ing-row"><div><div class="ing-name">Cynk</div><div class="cofactor-tag">Kofaktor</div></div><span class="ing-form">Chelat diglicynianowy</span><span class="ing-amount">5 mg</span><span class="ing-dv" style="color:var(--mid)">45%</span><div class="evidence-badge"><div class="evidence-dot" style="background:var(--mid)"></div><span class="evidence-label" style="color:var(--mid)">Średnie</span></div><span class="ing-notes">Niska dawka w formie chelatu — bez podrażnień przewodu pokarmowego.</span></div>
+          </div><!-- /ing-table-wrap -->
           <div class="divider"></div>
           <div class="two-col">
             <div><div class="section-label">Substancje pomocnicze</div><p class="other-ing-text">Hypromeloza (otoczka kapsułki), celuloza mikrokrystaliczna, dwutlenek krzemu</p></div>
@@ -799,7 +885,7 @@
           <div class="section-label">Na tle konkurencji — top 8 suplementów magnezu</div>
           <p class="bench-intro">Jak ten produkt wypada w porównaniu z bestsellerami? Zestawiliśmy formę, dawkę, certyfikaty, kofaktory i cenę za dawkę dzienną dla 8 najpopularniejszych magnezów na rynku.</p>
 
-          <table class="bench-table">
+          <div class="bench-table-wrap"><table class="bench-table">
             <thead>
               <tr>
                 <th>Produkt</th>
@@ -885,7 +971,7 @@
                 <td>4.2</td>
               </tr>
             </tbody>
-          </table>
+          </table></div><!-- /bench-table-wrap -->
 
           <div class="bench-verdict">
             <div class="bench-verdict-title">Podsumowanie</div>
@@ -899,11 +985,13 @@
         <!-- VALUE -->
         <div class="tab-panel" id="tab-value">
           <div class="section-label">Koszt dzienny wg formy magnezu</div>
+          <div class="val-table-wrap">
           <div class="val-table-head"><span>Produkt / kategoria</span><span>Koszt / dawka</span><span>Mg / dawka</span><span>Forma</span></div>
           <div class="val-row highlight"><span>Ten produkt</span><span class="val-tnum">3,12 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Diglicynian</span></div>
           <div class="val-row"><span>Średnia — chelaty</span><span class="val-tnum">3,68 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Diglicynian</span></div>
           <div class="val-row"><span>Średnia — cytrynian</span><span class="val-tnum">2,16 zł</span><span class="val-tnum">200 mg</span><span class="val-form">Cytrynian</span></div>
           <div class="val-row"><span>Średnia — tlenek</span><span class="val-tnum">1,24 zł</span><span class="val-tnum">400 mg</span><span class="val-form">Tlenek</span></div>
+          </div><!-- /val-table-wrap -->
           <div class="val-summary">
             <div class="val-metric"><div class="val-metric-label">Koszt dzienny</div><div class="val-metric-value">3,12 zł</div><div class="val-metric-sub">15% taniej niż średnia chelatów</div></div>
             <div class="val-metric"><div class="val-metric-label">Koszt za 1 mg Mg</div><div class="val-metric-value">0,016 zł</div><div class="val-metric-sub">W przeliczeniu na Mg pierwiastkowy</div></div>
@@ -1064,24 +1152,76 @@
       }, i * 80);
     });
   }
-  // Tooltip on hover for metric cards
+  // Tooltip on hover AND touch for metric cards
   document.querySelectorAll('.metric[data-tooltip]').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      let tip = this.querySelector('.metric-tip');
+    function showTip(el) {
+      let tip = el.querySelector('.metric-tip');
       if (!tip) {
         tip = document.createElement('div');
         tip.className = 'metric-tip';
-        tip.textContent = this.dataset.tooltip;
+        tip.textContent = el.dataset.tooltip;
         tip.style.cssText = 'position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--black);color:var(--white);font-size:11px;padding:8px 14px;border-radius:10px;max-width:220px;line-height:1.45;white-space:normal;z-index:10;pointer-events:none;opacity:0;transition:opacity 0.2s;text-align:center;';
-        this.appendChild(tip);
+        el.appendChild(tip);
       }
       requestAnimationFrame(() => { tip.style.opacity = '1'; });
-    });
-    card.addEventListener('mouseleave', function() {
-      const tip = this.querySelector('.metric-tip');
+    }
+    function hideTip(el) {
+      const tip = el.querySelector('.metric-tip');
       if (tip) tip.style.opacity = '0';
+    }
+    card.addEventListener('mouseenter', function() { showTip(this); });
+    card.addEventListener('mouseleave', function() { hideTip(this); });
+    // Touch: toggle on tap
+    card.addEventListener('click', function(e) {
+      const tip = this.querySelector('.metric-tip');
+      if (tip && tip.style.opacity === '1') { hideTip(this); } else { showTip(this); }
     });
   });
+
+  // Touch support for mg-type-card hover effects
+  document.querySelectorAll('.mg-type-card').forEach(card => {
+    card.addEventListener('click', function() {
+      const wasActive = this.classList.contains('touch-active');
+      document.querySelectorAll('.mg-type-card.touch-active').forEach(c => {
+        c.classList.remove('touch-active');
+        c.style.boxShadow = '';
+      });
+      if (!wasActive) {
+        this.classList.add('touch-active');
+        this.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+      }
+    });
+  });
+
+  // Mobile hamburger menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileDrawer = document.getElementById('mobile-drawer');
+  const sidebar = document.getElementById('main-sidebar');
+  if (menuToggle && mobileDrawer && sidebar) {
+    // Clone sidebar content into mobile drawer
+    mobileDrawer.innerHTML = sidebar.innerHTML;
+    menuToggle.addEventListener('click', function() {
+      const isOpen = mobileDrawer.classList.contains('open');
+      if (isOpen) {
+        mobileDrawer.classList.remove('open');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = '';
+      } else {
+        mobileDrawer.classList.add('open');
+        menuToggle.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+    // Close drawer on category click
+    mobileDrawer.querySelectorAll('.cat-item').forEach(item => {
+      item.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        menuToggle.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
   setTimeout(() => { animateBars(document); animateRings(); animateMetrics(); }, 100);
 })();
 </script>
