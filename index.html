@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -12,6 +13,7 @@
     --faint: #A3B8D8; --hairline: #E8EDF5; --bg: #F3F8FF; --white: #ffffff;
     --red: #C70000; --green: #0D9668; --amber: #D97706; --blue: #4A6FA5;
     --accent: #00B4D8; --accent-hover: #0096B7;
+    --klein: #002FA7; --klein-hover: #001F7A;
     --sidebar-w: 240px;
   }
   body {
@@ -51,7 +53,7 @@
   .cart-badge {
     display: flex; align-items: center; gap: 8px;
     height: 36px; padding: 0 16px; border-radius: 20px;
-    background: var(--blue); color: var(--white);
+    background: var(--klein); color: var(--white);
     font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap;
   }
   .cart-badge svg { flex-shrink: 0; }
@@ -178,8 +180,8 @@
   .qty-btn { width: 40px; height: 44px; border: none; background: var(--white); cursor: pointer; font-size: 16px; color: var(--mid); transition: background 0.12s; }
   .qty-btn:hover { background: var(--bg); }
   .qty-display { width: 40px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; border-left: 1px solid var(--hairline); border-right: 1px solid var(--hairline); background: var(--white); }
-  .add-cart { flex: 1; height: 44px; background: var(--blue); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 20px; transition: background 0.15s; }
-  .add-cart:hover { background: #3D5F8F; }
+  .add-cart { flex: 1; height: 44px; background: var(--klein); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 20px; transition: background 0.15s; }
+  .add-cart:hover { background: var(--klein-hover); }
   .subscribe-btn { width: 100%; height: 44px; background: transparent; border: 1px solid var(--hairline); border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); cursor: pointer; transition: border-color 0.15s; }
   .subscribe-btn:hover { border-color: var(--faint); }
   .perks { margin-top: 16px; font-size: 11px; color: var(--light); line-height: 2; }
@@ -349,8 +351,8 @@
   .rec-price { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
   .rec-per { font-size: 11px; color: var(--mid); margin-bottom: 12px; }
   .rec-rating { font-size: 11px; color: var(--light); }
-  .rec-add { width: 100%; height: 36px; background: var(--bg); border: none; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dark); cursor: pointer; margin-top: 12px; transition: background 0.15s; font-family: inherit; }
-  .rec-add:hover { background: var(--hairline); }
+  .rec-add { width: 100%; height: 36px; background: var(--klein); border: none; border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--white); cursor: pointer; margin-top: 12px; transition: background 0.15s; font-family: inherit; }
+  .rec-add:hover { background: var(--klein-hover); }
 
   /* ═══════ RESPONSIVE ═══════ */
   @media (max-width: 1024px) {
