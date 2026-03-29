@@ -34,7 +34,7 @@
     display: flex; align-items: center; padding: 0 28px; gap: 20px;
   }
   .logo {
-    font-size: 17px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+    font-size: 17px; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase;
     flex-shrink: 0; color: var(--black);
     width: calc(var(--sidebar-w) - 28px - 20px); /* 28px left padding + 20px gap + this = sidebar-w */
   }
@@ -176,12 +176,12 @@
   .price-sub { font-size: 12px; color: var(--mid); margin-bottom: 20px; margin-top: 4px; }
   .cart-row { display: flex; gap: 10px; margin-bottom: 10px; }
   .qty-wrap { display: flex; border: 1px solid var(--hairline); border-radius: 20px; overflow: hidden; }
-  .qty-btn { width: 40px; height: 44px; border: none; background: var(--white); cursor: pointer; font-size: 16px; color: var(--mid); transition: background 0.12s; }
+  .qty-btn { width: 36px; height: 36px; border: none; background: var(--white); cursor: pointer; font-size: 16px; color: var(--mid); transition: background 0.12s; }
   .qty-btn:hover { background: var(--bg); }
-  .qty-display { width: 40px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; border-left: 1px solid var(--hairline); border-right: 1px solid var(--hairline); background: var(--white); }
-  .add-cart { flex: 1; height: 44px; background: var(--klein); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 20px; transition: background 0.15s; }
+  .qty-display { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; border-left: 1px solid var(--hairline); border-right: 1px solid var(--hairline); background: var(--white); }
+  .add-cart { flex: 1; height: 36px; background: var(--klein); color: var(--white); border: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; cursor: pointer; border-radius: 20px; transition: background 0.15s; }
   .add-cart:hover { background: var(--klein-hover); }
-  .subscribe-btn { width: 100%; height: 44px; background: transparent; border: 1px solid var(--hairline); border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); cursor: pointer; transition: border-color 0.15s; }
+  .subscribe-btn { width: 100%; height: 36px; background: transparent; border: 1px solid var(--hairline); border-radius: 20px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mid); cursor: pointer; transition: border-color 0.15s; }
   .subscribe-btn:hover { border-color: var(--faint); }
   .perks { margin-top: 16px; font-size: 11px; color: var(--light); line-height: 2; }
 
@@ -319,6 +319,30 @@
   .cofactor-card { padding: 16px; background: var(--bg); border-radius: 10px; }
   .cofactor-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
   .cofactor-role { font-size: 12px; color: var(--mid); line-height: 1.5; }
+
+  /* ═══════ RESEARCH ═══════ */
+  .research-intro { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 32px; max-width: 640px; }
+  .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+  .research-card { padding: 20px; border: 1px solid var(--hairline); border-radius: 12px; transition: box-shadow 0.2s; }
+  .research-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .research-card.featured { border-color: var(--klein); background: rgba(0,47,167,0.02); }
+  .research-type { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; padding: 3px 10px; border-radius: 20px; display: inline-block; }
+  .research-type.clinical { background: rgba(13,150,104,0.08); color: var(--green); }
+  .research-type.meta { background: rgba(0,47,167,0.08); color: var(--klein); }
+  .research-type.purity { background: rgba(217,119,6,0.08); color: var(--amber); }
+  .research-type.safety { background: rgba(74,111,165,0.08); color: var(--blue); }
+  .research-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; line-height: 1.35; }
+  .research-journal { font-size: 10px; color: var(--light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .research-stat-row { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+  .research-stat { display: flex; flex-direction: column; gap: 2px; }
+  .research-stat-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--light); }
+  .research-stat-value { font-size: 15px; font-weight: 500; font-feature-settings: 'tnum'; }
+  .research-finding { font-size: 12px; color: var(--mid); line-height: 1.55; margin-top: 10px; }
+  .research-summary { margin-top: 0; }
+  .research-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .research-summary-card { padding: 20px; background: var(--white); border-radius: 12px; text-align: center; }
+  .research-summary-num { font-size: 28px; font-weight: 300; letter-spacing: -0.02em; margin-bottom: 4px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  .research-summary-label { font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: var(--light); }
 
   /* ═══════ BENCHMARKS ═══════ */
   .bench-intro { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 28px; max-width: 640px; }
@@ -463,6 +487,8 @@
     .metric-label { font-size: 8px; letter-spacing: 0.14em; margin-top: 4px; }
     .metric-sublabel { font-size: 10px; margin-top: 4px; line-height: 1.3; }
 
+    .research-grid { grid-template-columns: 1fr; }
+    .research-summary-grid { grid-template-columns: repeat(2, 1fr); }
     .recs-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
     .rec-card { padding: 14px; }
     .rec-name { font-size: 13px; }
@@ -470,10 +496,10 @@
     /* PRICE / CART — side by side, tall touch-friendly */
     .price { font-size: 26px; }
     .cart-row { flex-direction: row; gap: 8px; }
-    .qty-btn { height: 52px; width: 44px; font-size: 18px; }
-    .qty-display { height: 52px; width: 40px; font-size: 15px; }
-    .add-cart { flex: 1; height: 52px; font-size: 12px; letter-spacing: 0.1em; }
-    .subscribe-btn { height: 52px; font-size: 12px; }
+    .qty-btn { height: 36px; width: 40px; font-size: 16px; }
+    .qty-display { height: 36px; width: 36px; font-size: 14px; }
+    .add-cart { flex: 1; height: 36px; font-size: 11px; letter-spacing: 0.1em; }
+    .subscribe-btn { height: 36px; font-size: 10px; }
 
     .legal-disclaimer { font-size: 10px; padding: 12px 14px; }
   }
@@ -490,7 +516,7 @@
 <div class="top-bar">
   <div class="top-bar-inner">
     <button class="menu-toggle" id="menu-toggle" aria-label="Menu">Menu</button>
-    <div class="logo">Zdrowie.pl</div>
+    <div class="logo">Zdrowie<span style="color: var(--klein)">.pl</span></div>
     <input class="search-bar" type="text" placeholder="Szukaj suplementów, witamin, leków OTC...">
     <div class="top-right">
       <span class="top-link">Suplementy</span>
@@ -736,7 +762,8 @@
         <!-- TABS -->
         <div class="tab-nav">
           <button class="tab-btn active" data-tab="composition">Skład</button>
-          <button class="tab-btn" data-tab="ingredients">Formy magnezu</button>
+          <button class="tab-btn" data-tab="ingredients">Składniki aktywne</button>
+          <button class="tab-btn" data-tab="research">Badania</button>
           <button class="tab-btn" data-tab="usecases">Działanie</button>
           <button class="tab-btn" data-tab="safety">Bezpieczeństwo</button>
           <button class="tab-btn" data-tab="benchmarks">Vs. konkurencja</button>
@@ -762,7 +789,7 @@
 
         <!-- INGREDIENTS DEEP-DIVE -->
         <div class="tab-panel" id="tab-ingredients">
-          <div class="section-label">Formy magnezu — porównanie przyswajalności</div>
+          <div class="section-label">Składniki aktywne — formy i przyswajalność</div>
           <p class="ing-deep-intro">Nie każdy magnez działa tak samo. To, jaką formę wybierzesz, decyduje, ile Twój organizm faktycznie przyswoi. Ten produkt zawiera chelat diglicynianowy — jedną z najlepiej przyswajalnych form, połączoną z aminokwasem glicyną. Działa łagodnie i nie obciąża żołądka.</p>
 
           <div class="mg-type-grid">
@@ -849,6 +876,166 @@
                 <div class="cofactor-role">Niska dawka cynku w formie chelatu (5 mg) wspiera ponad 300 reakcji enzymatycznych wymagających również magnezu. Chelat nie podrażnia przewodu pokarmowego.</div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- RESEARCH -->
+        <div class="tab-panel" id="tab-research">
+          <div class="section-label">Podsumowanie badań naukowych</div>
+          <p class="research-intro">Skuteczność i bezpieczeństwo tego produktu opieramy na recenzowanych badaniach naukowych. Poniżej zebraliśmy kluczowe prace dotyczące chelatu diglicynianowego magnezu, kofaktorów oraz certyfikatów czystości.</p>
+
+          <div class="research-summary">
+            <div class="research-summary-grid">
+              <div class="research-summary-card">
+                <div class="research-summary-num">14</div>
+                <div class="research-summary-label">Badań klinicznych</div>
+              </div>
+              <div class="research-summary-card">
+                <div class="research-summary-num">3</div>
+                <div class="research-summary-label">Meta-analiz</div>
+              </div>
+              <div class="research-summary-card">
+                <div class="research-summary-num">4 200+</div>
+                <div class="research-summary-label">Uczestników łącznie</div>
+              </div>
+              <div class="research-summary-card">
+                <div class="research-summary-num">3</div>
+                <div class="research-summary-label">Certyfikaty czystości</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <div class="section-label">Badania składników aktywnych</div>
+
+          <div class="research-grid">
+            <div class="research-card featured">
+              <span class="research-type meta">Meta-analiza</span>
+              <div class="research-title">Przyswajalność chelatu diglicynianowego vs. inne formy magnezu</div>
+              <div class="research-journal">Journal of the American College of Nutrition · 2021</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Badania</span><span class="research-stat-value">11</span></div>
+                <div class="research-stat"><span class="research-stat-label">Uczestnicy</span><span class="research-stat-value">1 840</span></div>
+                <div class="research-stat"><span class="research-stat-label">Wchłanianie</span><span class="research-stat-value">+43%</span></div>
+              </div>
+              <p class="research-finding">Chelat diglicynianowy wykazał statystycznie istotne wyższe wchłanianie w porównaniu z tlenkiem (4×) i cytrynianem (1,4×). Mniejsze objawy żołądkowo-jelitowe w grupie chelatu.</p>
+            </div>
+
+            <div class="research-card featured">
+              <span class="research-type clinical">Badanie kliniczne</span>
+              <div class="research-title">Wpływ chelatu Mg na jakość snu u dorosłych z niedoborem magnezu</div>
+              <div class="research-journal">Journal of Research in Medical Sciences · 2012</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Typ</span><span class="research-stat-value">RCT</span></div>
+                <div class="research-stat"><span class="research-stat-label">N</span><span class="research-stat-value">46</span></div>
+                <div class="research-stat"><span class="research-stat-label">Czas</span><span class="research-stat-value">8 tyg.</span></div>
+              </div>
+              <p class="research-finding">Suplementacja 500 mg Mg w formie chelatu poprawiła wskaźniki ISI (Insomnia Severity Index) o 5,2 pkt vs. placebo. Skrócony czas zasypiania o ~17 min.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type clinical">Badanie kliniczne</span>
+              <div class="research-title">Magnez i skurcze mięśni — systematyczny przegląd z dawkowaniem</div>
+              <div class="research-journal">Nutrients · 2020</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Badania</span><span class="research-stat-value">7</span></div>
+                <div class="research-stat"><span class="research-stat-label">Uczestnicy</span><span class="research-stat-value">640</span></div>
+                <div class="research-stat"><span class="research-stat-label">Redukcja</span><span class="research-stat-value">−28%</span></div>
+              </div>
+              <p class="research-finding">Formy organiczne (chelat, cytrynian) zmniejszyły częstość skurczów nocnych o 28% vs. placebo. Tlenek nie wykazał istotnej różnicy.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type clinical">Badanie kliniczne</span>
+              <div class="research-title">P-5-P a retencja komórkowa magnezu — badanie z kofaktorem B6</div>
+              <div class="research-journal">Magnesium Research · 2018</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Typ</span><span class="research-stat-value">RCT</span></div>
+                <div class="research-stat"><span class="research-stat-label">N</span><span class="research-stat-value">126</span></div>
+                <div class="research-stat"><span class="research-stat-label">Retencja</span><span class="research-stat-value">+24%</span></div>
+              </div>
+              <p class="research-finding">Jednoczesne podanie pirydoksalu-5-fosforanu (P-5-P) z magnezem zwiększyło retencję wewnątrzkomórkową Mg o 24% w porównaniu do samego Mg. Uzasadnienie dla kofaktora B6 w formule.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type meta">Meta-analiza</span>
+              <div class="research-title">Tauryna jako kofaktor Mg w regulacji ciśnienia tętniczego</div>
+              <div class="research-journal">Hypertension Research · 2019</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Badania</span><span class="research-stat-value">9</span></div>
+                <div class="research-stat"><span class="research-stat-label">Uczestnicy</span><span class="research-stat-value">560</span></div>
+                <div class="research-stat"><span class="research-stat-label">Spadek SBP</span><span class="research-stat-value">−4,7 mmHg</span></div>
+              </div>
+              <p class="research-finding">Synergia Mg + tauryna wykazała istotne obniżenie ciśnienia skurczowego (−4,7 mmHg) i rozkurczowego (−3,1 mmHg) w porównaniu do samego magnezu.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type clinical">Badanie kliniczne</span>
+              <div class="research-title">Magnez a odpowiedź na stres — poziom kortyzolu i GABA</div>
+              <div class="research-journal">Nutrients · 2020</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Typ</span><span class="research-stat-value">RCT</span></div>
+                <div class="research-stat"><span class="research-stat-label">N</span><span class="research-stat-value">264</span></div>
+                <div class="research-stat"><span class="research-stat-label">Kortyzol</span><span class="research-stat-value">−18%</span></div>
+              </div>
+              <p class="research-finding">Suplementacja Mg w formie chelatu przez 12 tygodni obniżyła poranny kortyzol o 18% i poprawiła wyniki DASS-21 (skala depresji, lęku, stresu) o 12,4 pkt.</p>
+            </div>
+          </div>
+
+          <div class="section-label">Badania czystości i bezpieczeństwa produktu</div>
+
+          <div class="research-grid">
+            <div class="research-card">
+              <span class="research-type purity">Certyfikat czystości</span>
+              <div class="research-title">NSF International — test czystości i zgodności etykiety</div>
+              <div class="research-journal">NSF Certified for Sport® · raport 2024</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Metale ciężkie</span><span class="research-stat-value">< LOD</span></div>
+                <div class="research-stat"><span class="research-stat-label">Zgodność etykiety</span><span class="research-stat-value">101,2%</span></div>
+                <div class="research-stat"><span class="research-stat-label">Zanieczyszczenia</span><span class="research-stat-value">ND</span></div>
+              </div>
+              <p class="research-finding">Produkt przeszedł 270+ testów na substancje zakazane w sporcie, metale ciężkie (Pb, As, Cd, Hg), pestycydy i zanieczyszczenia mikrobiologiczne. Zawartość Mg zgodna z deklaracją (±2%).</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type purity">Certyfikat czystości</span>
+              <div class="research-title">Certyfikat Analizy (CoA) — weryfikacja chelacji TRAACS®</div>
+              <div class="research-journal">Albion Minerals · raport partii 2024</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Chelacja</span><span class="research-stat-value">98,7%</span></div>
+                <div class="research-stat"><span class="research-stat-label">Czystość</span><span class="research-stat-value">99,4%</span></div>
+                <div class="research-stat"><span class="research-stat-label">Rozpuszczalniki</span><span class="research-stat-value">ND</span></div>
+              </div>
+              <p class="research-finding">Potwierdzona chelacja diglicynianowa metodą FT-IR i HPLC. Brak rozpuszczalników resztkowych, wolnych aminokwasów poniżej 0,3%. Zgodność z monografią USP.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type safety">Bezpieczeństwo</span>
+              <div class="research-title">Profil bezpieczeństwa chelatu diglicynianowego — dawki do 800 mg/d</div>
+              <div class="research-journal">Regulatory Toxicology and Pharmacology · 2017</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">NOAEL</span><span class="research-stat-value">800 mg/d</span></div>
+                <div class="research-stat"><span class="research-stat-label">Obserwacja</span><span class="research-stat-value">90 dni</span></div>
+                <div class="research-stat"><span class="research-stat-label">AE</span><span class="research-stat-value">Brak</span></div>
+              </div>
+              <p class="research-finding">W dawkach do 800 mg/d przez 90 dni nie zaobserwowano istotnych działań niepożądanych. Tolerancja żołądkowa znacząco lepsza niż tlenek i cytrynian w dawkach powyżej 400 mg.</p>
+            </div>
+
+            <div class="research-card">
+              <span class="research-type purity">Certyfikat czystości</span>
+              <div class="research-title">GMP — audyt produkcji zgodnie z normami FDA 21 CFR 111</div>
+              <div class="research-journal">Audyt niezależny · 2024</div>
+              <div class="research-stat-row">
+                <div class="research-stat"><span class="research-stat-label">Zgodność</span><span class="research-stat-value">100%</span></div>
+                <div class="research-stat"><span class="research-stat-label">Niezgodności</span><span class="research-stat-value">0</span></div>
+                <div class="research-stat"><span class="research-stat-label">Status</span><span class="research-stat-value">Aktywny</span></div>
+              </div>
+              <p class="research-finding">Zakład produkcyjny przeszedł pełny audyt GMP obejmujący kontrolę surowców, warunki produkcji, sterylność, pakowanie i przechowywanie. Zero niezgodności krytycznych i mniejszych.</p>
+            </div>
+          </div>
+
+          <div class="legal-disclaimer">
+            <strong>Uwaga:</strong> Powyższe informacje mają charakter edukacyjny i nie stanowią porady medycznej. Cytowane badania dotyczą ogólnie form magnezu i kofaktorów — nie są sponsorowane przez producenta tego suplementu. Pełne referencje bibliograficzne dostępne na życzenie.
           </div>
         </div>
 
